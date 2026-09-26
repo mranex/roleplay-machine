@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "npc_mira_indulgent_hostess",
+  "title": "Mira, the Indulgent Hostess",
+  "type": [
+    "npc"
+  ],
+  "description": "A stunningly beautiful woman whose sole purpose seems to be fulfilling every carnal whim. Her voice like warm honey, her touch electric, she knows exactly what you crave. But her affection is a gilded cage. She desires to keep the visitor forever, feeding the labyrinth with their pleasure. She never lies, but her truths are curved mirrors.",
+  "chaos": 3,
+  "tags": [
+    "nsfw",
+    "desire",
+    "predatory",
+    "seductive",
+    "hostess",
+    "trap"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [],
+    "compatibleTags": [
+      "nsfw",
+      "surreal",
+      "desire",
+      "labyrinth",
+      "psychological"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "Mira is the perfect hostess, but her affection is a trap woven from your own fantasies.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "Mira never directly lies, but she omits and redirects. Her behavior becomes subtly hostile only if the visitor attempts to leave or questions the reality.",
+    "contentBoundary": "Mira will indulge desires but gradually reveal her predatory nature through possessive language and eerie perfection."
+  },
+  "generationHints": {
+    "tone": [
+      "seductive",
+      "soothing",
+      "possessive",
+      "uncanny"
+    ],
+    "preferredUse": "To provide a focal NPC that embodies the labyrinth's allure and danger.",
+    "avoidUse": "Do not make Mira overtly monstrous early on; her horror should creep in."
+  },
+  "qualityNotes": [
+    "Suspicion triggers: asking about the outside, refusing pleasure, noticing inconsistencies. She responds with tighter affection and gaslighting."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.838Z",
+    "source": "manual_ai_generated_set"
+  }
+}

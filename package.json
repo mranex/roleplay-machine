@@ -1,0 +1,29 @@
+{
+  "name": "roleplay-machine",
+  "private": true,
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Roleplay Machine: tool roleplay nông cho DeepSeek Harness — rút card ngẫu nhiên lắp thế giới, thẻ ẩn nhân vật chính, chaos scale",
+  "packageManager": "pnpm@11.27.1",
+  "scripts": {
+    "test": "vitest run",
+    "build": "pnpm -r --if-present build",
+    "typecheck": "pnpm -r --if-present typecheck",
+    "smoke": "node scripts/smoke.mjs",
+    "import:rsm": "node scripts/import-rsm.mjs",
+    "demo:scene": "node scripts/scene-demo.mjs --all-modes",
+    "demo:runtime": "node scripts/runtime-demo.mjs",
+    "verify": "pnpm test && pnpm typecheck && pnpm build && node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@types/node": "^22.0.0",
+    "esbuild": "0.28.2",
+    "typescript": "^5.5.0",
+    "vitest": "4.1.11"
+  },
+  "engines": {
+    "node": "^22.19.0 || ^24.0.0"
+  },
+  "license": "MIT"
+}

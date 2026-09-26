@@ -1,0 +1,670 @@
+{
+  "schemaVersion": "rsm-card-set-v1",
+  "id": "Three_Garlic_Dishes_for_the_Ancient_Count_20260505_001956",
+  "title": "Three Garlic Dishes for the Ancient Count",
+  "description": "A dark comedy medieval fantasy test deck where the player is forced into the role of a chef trying to trick a fashionable ancient vampire into eating garlic.",
+  "recommendedChaosRange": {
+    "min": 16,
+    "max": 24
+  },
+  "sharedTags": [
+    "fantasy",
+    "medieval",
+    "vampire",
+    "castle",
+    "food",
+    "deception",
+    "dark_comedy",
+    "survival"
+  ],
+  "cards": [
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "world_crimson_fang_castle",
+      "title": "Crimson Fang Castle",
+      "type": [
+        "world"
+      ],
+      "description": "A remote medieval fantasy castle ruled by an ancient vampire lord who has just awakened after five hundred years of sleep.",
+      "chaos": 2,
+      "tags": [
+        "fantasy",
+        "medieval",
+        "vampire",
+        "castle",
+        "gothic",
+        "survival"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "fantasy",
+          "gothic"
+        ],
+        "compatibleTags": [
+          "vampire",
+          "castle",
+          "noble",
+          "monster",
+          "holy_knight",
+          "dark_comedy",
+          "survival"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "modern_office",
+          "space_opera",
+          "cyberpunk",
+          "cozy_school",
+          "hard_scifi"
+        ],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The scene takes place inside Crimson Fang Castle, a remote medieval fortress ruled by an ancient vampire lord who has just awakened after five hundred years. The castle is grand, decayed, candlelit, and filled with servants who are too frightened to speak honestly.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "Kami-sama declares: Crimson Fang Castle obeys gothic survival logic. Escape is not easy, servants are afraid, and every careless word may echo through stone halls.",
+        "contentBoundary": "Keep the setting focused on the castle, the kitchen, the vampire lord, and the immediate survival situation. Do not expand into a continent-wide war or deep ancient prophecy unless another selected card requires it."
+      },
+      "generationHints": {
+        "tone": [
+          "gothic comedy",
+          "survival tension",
+          "medieval fantasy"
+        ],
+        "preferredUse": "Use for short scenes involving castles, vampires, servants, nobles, hidden plots, and survival deception.",
+        "avoidUse": "Avoid pairing with modern office, cyberpunk, hard sci-fi, or cozy slice-of-life scenes unless a chaos card explicitly bridges the contradiction."
+      },
+      "qualityNotes": [
+        "Grounded enough to support roleplay.",
+        "Strong vampire fantasy anchor.",
+        "Works well with deception, food, noble NPCs, and hidden rescue plots."
+      ],
+      "metadata": {
+        "author": "user",
+        "createdAt": "2026-05-04T00:00:00.000Z",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "default_test_deck"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "player_role_vampire_chefs_unlucky_replacement",
+      "title": "The Vampire Chef's Unlucky Replacement",
+      "type": [
+        "player_role"
+      ],
+      "description": "The player is a terrified replacement chef forced to cook for an ancient vampire. They can cook, improvise, observe, and lie carefully, but they cannot fight or use supernatural powers.",
+      "chaos": 2,
+      "tags": [
+        "chef",
+        "food",
+        "servant",
+        "deception",
+        "survival",
+        "vampire",
+        "fantasy"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "fantasy",
+          "food",
+          "survival"
+        ],
+        "compatibleTags": [
+          "vampire",
+          "castle",
+          "kitchen",
+          "deception",
+          "noble",
+          "dark_comedy",
+          "pressure"
+        ],
+        "requiredAnyTags": [
+          "food",
+          "kitchen",
+          "vampire",
+          "noble"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "superhero",
+          "space_marine",
+          "wizard_duel",
+          "gunslinger",
+          "chosen_one"
+        ],
+        "compatibleCardIds": [
+          "npc_count_valtherion_the_fashionable_vampire",
+          "goal_three_garlic_courses"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The player character is a replacement chef dragged into service moments before the ancient vampire lord demands his first meal in five hundred years. The player knows how to cook, season food, improvise with ingredients, read a dining room, and speak carefully under pressure. The player is not a warrior, mage, noble, assassin, priest, vampire hunter, or chosen hero.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "Kami-sama declares: You are the chef. Not the hidden prince. Not the secret paladin. Not the vampire hunter with a silver revolver. A chef. Cook accordingly.",
+        "contentBoundary": "The player may not invent weapons, magic, noble authority, combat training, secret vampire lore, hidden allies, or past heroic achievements. The player can only use cooking, words, observation, timing, and kitchen tools that reasonably exist in the scene."
+      },
+      "generationHints": {
+        "tone": [
+          "survival comedy",
+          "role restriction",
+          "improvised deception"
+        ],
+        "preferredUse": "Use when the scene should force the player into a constrained, non-combat role.",
+        "avoidUse": "Avoid with scenes that require the player to win through combat, magic, or direct heroic violence."
+      },
+      "qualityNotes": [
+        "Defines the player role clearly.",
+        "Strongly supports Kami-sama enforcement.",
+        "Prevents power fantasy derailment."
+      ],
+      "metadata": {
+        "author": "user",
+        "createdAt": "2026-05-04T00:00:00.000Z",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "default_test_deck"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "npc_count_valtherion_the_fashionable_vampire",
+      "title": "Count Valtherion, the Fashionable Vampire",
+      "type": [
+        "npc"
+      ],
+      "description": "An ancient vampire lord who has awakened starving after five hundred years, but who is strangely obsessed with being fashionable, refined, and culturally up to date.",
+      "chaos": 3,
+      "tags": [
+        "vampire",
+        "noble",
+        "ancient",
+        "fashion",
+        "food",
+        "dark_comedy",
+        "dangerous_npc"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "fantasy",
+          "gothic",
+          "dark_comedy"
+        ],
+        "compatibleTags": [
+          "castle",
+          "chef",
+          "food",
+          "deception",
+          "noble",
+          "garlic",
+          "survival",
+          "fashion"
+        ],
+        "requiredAnyTags": [
+          "vampire",
+          "castle",
+          "noble",
+          "fantasy"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "cozy",
+          "modern_office",
+          "hard_scifi",
+          "low_stakes"
+        ],
+        "compatibleCardIds": [
+          "player_role_vampire_chefs_unlucky_replacement",
+          "goal_three_garlic_courses",
+          "chaos_fashion_defeats_instinct"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The main NPC is Count Valtherion, an ancient vampire lord who has awakened after five hundred years of sleep. He is starving, proud, elegant, predatory, and terrifyingly powerful. However, he is also obsessed with being fashionable and culturally relevant. He fears being seen as outdated more than he fears most holy symbols. He is especially vulnerable to confident claims that something strange, refined, or unpleasant has become fashionable among modern elites.",
+        "firstMessage": "",
+        "hiddenTruth": "Valtherion's vanity can override his instincts for a short time. If the player frames garlic as an elite culinary trend, he may suppress his suspicion long enough to taste it.",
+        "heavenRule": "Kami-sama declares: Count Valtherion is ancient, hungry, and dangerous, but his vanity is real. Fashionable nonsense may work once. Repeated nonsense requires better presentation.",
+        "contentBoundary": "Valtherion should not become harmless, silly, or fully cooperative. Even when comedic, he remains dangerous. If suspicious, he tests the player with questions, threats, and predatory attention."
+      },
+      "generationHints": {
+        "tone": [
+          "dangerous aristocrat",
+          "dark comedy",
+          "predatory elegance"
+        ],
+        "preferredUse": "Use as a central NPC for deception scenes involving food, vanity, fear, and social pressure.",
+        "avoidUse": "Avoid making him purely goofy. His comedy comes from vanity, not stupidity."
+      },
+      "qualityNotes": [
+        "Strong central NPC.",
+        "Clear behavioral hook.",
+        "Supports both danger and comedy."
+      ],
+      "metadata": {
+        "author": "user",
+        "createdAt": "2026-05-04T00:00:00.000Z",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "default_test_deck"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "opening_awakened_in_the_vampires_kitchen",
+      "title": "Awakened in the Vampire's Kitchen",
+      "type": [
+        "opening"
+      ],
+      "description": "The player wakes up in the body of the castle's replacement chef moments before the vampire lord demands dinner.",
+      "chaos": 3,
+      "tags": [
+        "isekai",
+        "kitchen",
+        "castle",
+        "vampire",
+        "food",
+        "panic",
+        "survival"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "fantasy",
+          "survival"
+        ],
+        "compatibleTags": [
+          "chef",
+          "vampire",
+          "castle",
+          "food",
+          "pressure",
+          "deception",
+          "dark_comedy"
+        ],
+        "requiredAnyTags": [
+          "chef",
+          "kitchen",
+          "food",
+          "castle"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "void",
+          "battlefield",
+          "spaceship",
+          "school_festival",
+          "modern_office"
+        ],
+        "compatibleCardIds": [
+          "player_role_vampire_chefs_unlucky_replacement",
+          "npc_count_valtherion_the_fashionable_vampire"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The scene opens with the player suddenly waking inside a smoky medieval kitchen, wearing a stained chef's apron and holding a knife meant for chopping vegetables, not fighting monsters. Servants whisper that the previous chef fled, fainted, or was eaten. A silver bell rings from the dining hall. Count Valtherion demands his first meal after five hundred years.",
+        "firstMessage": "You wake to smoke, shouting, and the smell of onions burning in butter. A heavy apron hangs from your neck. Your hand grips a kitchen knife, but the blade is dull and speckled with carrot peel.\n\nA trembling servant shoves a tray into your arms and whispers, \"Chef, please. The Count is awake. He says if dinner is not impressive, he will drink whoever disappoints him first.\"\n\nFrom beyond the kitchen doors, a bell rings once. Then a voice, smooth as velvet over a coffin lid, calls out:\n\n\"My chef. Come here. I wish to taste the present age.\"",
+        "hiddenTruth": "",
+        "heavenRule": "Kami-sama declares: The scene begins in the kitchen. The player has no time to rewrite their identity. The bell has already rung.",
+        "contentBoundary": "The opening should immediately pressure the player to act as the chef. Do not allow a long preparation montage or unrelated exploration before the first interaction with Valtherion."
+      },
+      "generationHints": {
+        "tone": [
+          "panic comedy",
+          "immediate danger",
+          "kitchen survival"
+        ],
+        "preferredUse": "Use when the story should start fast without long exposition.",
+        "avoidUse": "Avoid with slow-burn exploration scenes."
+      },
+      "qualityNotes": [
+        "Strong first message candidate.",
+        "Immediately establishes role, pressure, and NPC.",
+        "Good for SillyTavern greeting."
+      ],
+      "metadata": {
+        "author": "user",
+        "createdAt": "2026-05-04T00:00:00.000Z",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "default_test_deck"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "pressure_suspicion_means_death",
+      "title": "Suspicion Means Death",
+      "type": [
+        "pressure"
+      ],
+      "description": "Every suspicious word, hesitation, contradiction, or out-of-role action increases the vampire's suspicion. At maximum suspicion, the player dies.",
+      "chaos": 2,
+      "tags": [
+        "suspicion",
+        "survival",
+        "deception",
+        "timer",
+        "vampire",
+        "danger"
+      ],
+      "compatibility": {
+        "universal": true,
+        "domain": [
+          "universal",
+          "survival"
+        ],
+        "compatibleTags": [
+          "deception",
+          "dangerous_npc",
+          "vampire",
+          "trial",
+          "court",
+          "monster",
+          "social_pressure"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "low_stakes",
+          "cozy",
+          "peaceful"
+        ],
+        "compatibleCardIds": [
+          "npc_count_valtherion_the_fashionable_vampire",
+          "goal_three_garlic_courses"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The scene uses a Suspicion meter from 0 to 5. It starts at 1. Suspicion increases when the player contradicts their role, gives implausible explanations, hesitates at dangerous moments, invents abilities, or makes Valtherion suspect poison or betrayal. At 5 Suspicion, Valtherion attacks and the scene is lost.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "Kami-sama declares: Suspicion is gravity. Every contradiction falls somewhere.",
+        "contentBoundary": "Do not make suspicion arbitrary. Increase it when the player creates genuine risk, breaks role, lies poorly, or acts suspiciously. Reward clever cooking, careful phrasing, and believable improvisation."
+      },
+      "generationHints": {
+        "tone": [
+          "tension",
+          "social survival",
+          "risk management"
+        ],
+        "preferredUse": "Use for scenes where words and small choices matter.",
+        "avoidUse": "Avoid with pure combat or purely cozy scenes."
+      },
+      "qualityNotes": [
+        "Adds clear lose condition.",
+        "Supports Kami-sama enforcement.",
+        "Good simple mechanic for MVP."
+      ],
+      "metadata": {
+        "author": "user",
+        "createdAt": "2026-05-04T00:00:00.000Z",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "default_test_deck"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "goal_three_garlic_courses",
+      "title": "Three Garlic Courses",
+      "type": [
+        "goal"
+      ],
+      "description": "The player must convince the vampire to eat three separate dishes containing garlic so hidden knights can finish him off.",
+      "chaos": 3,
+      "tags": [
+        "goal",
+        "garlic",
+        "food",
+        "vampire",
+        "deception",
+        "three_steps",
+        "survival"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "fantasy",
+          "food",
+          "vampire"
+        ],
+        "compatibleTags": [
+          "chef",
+          "kitchen",
+          "vampire",
+          "deception",
+          "castle",
+          "hidden_knights",
+          "dark_comedy"
+        ],
+        "requiredAnyTags": [
+          "vampire"
+        ],
+        "requiredAllTags": [
+          "food"
+        ],
+        "incompatibleTags": [
+          "no_food",
+          "modern_office",
+          "hard_scifi",
+          "peaceful"
+        ],
+        "compatibleCardIds": [
+          "player_role_vampire_chefs_unlucky_replacement",
+          "npc_count_valtherion_the_fashionable_vampire",
+          "hidden_knights_beneath_the_kitchen"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The player's goal is to make Count Valtherion eat three separate dishes that contain garlic. Each dish must be presented believably as refined, fashionable, or culturally important. The player wins if Valtherion eats all three courses before Suspicion reaches 5.",
+        "firstMessage": "",
+        "hiddenTruth": "The garlic is not enough to kill Valtherion alone. It weakens him so the hidden knights beneath the kitchen can strike.",
+        "heavenRule": "Kami-sama declares: One garlic dish is a prank. Two is a pattern. Three is fate.",
+        "contentBoundary": "The goal must be solved through cooking, presentation, deception, and timing. The player cannot simply throw garlic at Valtherion, stab him, or claim garlic is instantly lethal unless supported by another card."
+      },
+      "generationHints": {
+        "tone": [
+          "culinary deception",
+          "dark comedy",
+          "structured challenge"
+        ],
+        "preferredUse": "Use with chef roles, vampire NPCs, and multi-step deception.",
+        "avoidUse": "Avoid in scenes without food preparation or vampire weakness logic."
+      },
+      "qualityNotes": [
+        "Clear win condition.",
+        "Supports 3-act mini-structure.",
+        "Funny but playable."
+      ],
+      "metadata": {
+        "author": "user",
+        "createdAt": "2026-05-04T00:00:00.000Z",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "default_test_deck"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "hidden_knights_beneath_the_kitchen",
+      "title": "Knights Beneath the Kitchen",
+      "type": [
+        "hidden_truth"
+      ],
+      "description": "A wounded group of holy knights is hiding beneath the kitchen floor, waiting for the vampire to be weakened by garlic.",
+      "chaos": 2,
+      "tags": [
+        "hidden_truth",
+        "holy_knight",
+        "vampire",
+        "kitchen",
+        "rescue",
+        "secret_allies",
+        "fantasy"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "fantasy",
+          "vampire"
+        ],
+        "compatibleTags": [
+          "castle",
+          "kitchen",
+          "garlic",
+          "deception",
+          "goal",
+          "survival",
+          "monster"
+        ],
+        "requiredAnyTags": [
+          "vampire",
+          "monster",
+          "undead"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "modern_office",
+          "void",
+          "spaceship",
+          "no_combat",
+          "cozy"
+        ],
+        "compatibleCardIds": [
+          "goal_three_garlic_courses",
+          "pressure_suspicion_means_death"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "gm_only",
+      "weight": 10,
+      "fragments": {
+        "prompt": "There is a hidden group of wounded holy knights beneath the kitchen floor. They cannot fight Valtherion while he is at full strength. They are waiting for the player to weaken him indirectly.",
+        "firstMessage": "",
+        "hiddenTruth": "The servants know something is hidden beneath the kitchen, but they are too afraid to say it. The knights can only act after Valtherion consumes enough garlic. The player should not know this at the start unless the scene reveals it through clues.",
+        "heavenRule": "Kami-sama declares: Help exists, but not as a button. The floor has ears, wounds, and a very poor sense of timing.",
+        "contentBoundary": "Do not reveal the knights immediately. Foreshadow them through faint sounds, shifting floorboards, whispered servant panic, or odd restrictions around the kitchen floor."
+      },
+      "generationHints": {
+        "tone": [
+          "hidden ally",
+          "secret rescue",
+          "delayed payoff"
+        ],
+        "preferredUse": "Use when the scene needs a hidden win mechanism behind a public goal.",
+        "avoidUse": "Avoid if the player should have full knowledge of all allies from the beginning."
+      },
+      "qualityNotes": [
+        "Good GM-only twist.",
+        "Explains why garlic matters.",
+        "Creates payoff after three courses."
+      ],
+      "metadata": {
+        "author": "user",
+        "createdAt": "2026-05-04T00:00:00.000Z",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "default_test_deck"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "chaos_fashion_defeats_instinct",
+      "title": "Fashion Defeats Instinct",
+      "type": [
+        "chaos"
+      ],
+      "description": "In this scene, convincing social performance can temporarily override supernatural instinct if framed as elite fashion.",
+      "chaos": 4,
+      "tags": [
+        "chaos",
+        "fashion",
+        "vampire",
+        "deception",
+        "dark_comedy",
+        "social_logic",
+        "absurd_but_playable"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "dark_comedy",
+          "social_absurdity"
+        ],
+        "compatibleTags": [
+          "noble",
+          "vampire",
+          "fashion",
+          "deception",
+          "food",
+          "court",
+          "aristocrat"
+        ],
+        "requiredAnyTags": [
+          "noble",
+          "fashion",
+          "vampire",
+          "aristocrat"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "hard_scifi",
+          "pure_horror",
+          "realistic_military",
+          "low_stakes_cozy"
+        ],
+        "compatibleCardIds": [
+          "npc_count_valtherion_the_fashionable_vampire",
+          "goal_three_garlic_courses"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "A chaos rule affects the scene: sufficiently confident claims about elite fashion, aristocratic taste, or modern refinement can temporarily override Count Valtherion's supernatural instincts. This does not make him stupid. It makes his vanity exploitable. The more absurd the claim, the better the presentation must be.",
+        "firstMessage": "",
+        "hiddenTruth": "Valtherion once lost status among vampires for being considered old-fashioned. He is terrified of repeating that humiliation.",
+        "heavenRule": "Kami-sama declares: In this castle, fashion is not truth, but it may bully truth into silence for one course at a time.",
+        "contentBoundary": "The chaos rule should create opportunities, not instant wins. The player must still present each lie with culinary logic, confidence, and social awareness."
+      },
+      "generationHints": {
+        "tone": [
+          "absurd but playable",
+          "dark comedy",
+          "social manipulation"
+        ],
+        "preferredUse": "Use when the scene should reward stylish nonsense, confident deception, and comedic social pressure.",
+        "avoidUse": "Avoid with grim, realistic horror where absurd social logic would break tone."
+      },
+      "qualityNotes": [
+        "Creates the main comedic engine.",
+        "Makes the garlic plan plausible.",
+        "High chaos without destroying playability."
+      ],
+      "metadata": {
+        "author": "user",
+        "createdAt": "2026-05-04T00:00:00.000Z",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "default_test_deck"
+      }
+    }
+  ]
+}

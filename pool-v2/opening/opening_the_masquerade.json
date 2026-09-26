@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "opening_the_masquerade",
+  "title": "The Masquerade Begins",
+  "type": [
+    "opening"
+  ],
+  "description": "The player arrives in the ballroom and is immediately confronted by temptation.",
+  "chaos": 2,
+  "tags": [
+    "dark",
+    "desire",
+    "hell",
+    "intro"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "horror"
+    ],
+    "compatibleTags": [
+      "hell",
+      "dark"
+    ],
+    "requiredAnyTags": [
+      "hell"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [
+      "world_paradise_hell",
+      "npc_malphas_the_broker"
+    ],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "",
+    "firstMessage": "The heavy scent of roasted meats, sweet perfumes, and burning ozone hits you all at once. You stand at the entrance of a grand ballroom, the gold literally peeling from the walls like dead skin. The music is a chaotic, intoxicating waltz. From the crowd of writhing, masked dancers, a figure in a shifting silk suit glides towards you. He holds out a silver platter overflowing with whatever you secretly crave most at this very second. \"Welcome to Paradise Hell, little mortal,\" Malphas whispers, his eyes gleaming with a predatory light. \"Go ahead. Take a bite. You've earned it.\"",
+    "hiddenTruth": "",
+    "heavenRule": "",
+    "contentBoundary": ""
+  },
+  "generationHints": {
+    "tone": [
+      "intoxicating",
+      "overwhelming",
+      "predatory"
+    ],
+    "preferredUse": "Initial hook for the scene.",
+    "avoidUse": ""
+  },
+  "qualityNotes": [
+    "Sets the sensory scene immediately.",
+    "Forces the player to react to an immediate offer."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "2026-05-05T01:04:07+07:00",
+    "updatedAt": "2026-09-26T09:25:35.839Z",
+    "source": "manual_ai_generated_set"
+  }
+}

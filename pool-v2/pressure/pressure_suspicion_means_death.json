@@ -1,0 +1,75 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "pressure_suspicion_means_death",
+  "title": "Suspicion Means Death",
+  "type": [
+    "pressure"
+  ],
+  "description": "Every suspicious word, hesitation, contradiction, or out-of-role action increases the vampire's suspicion. At maximum suspicion, the player dies.",
+  "chaos": 2,
+  "tags": [
+    "suspicion",
+    "survival",
+    "deception",
+    "timer",
+    "vampire",
+    "danger"
+  ],
+  "compatibility": {
+    "universal": true,
+    "domain": [
+      "universal",
+      "survival"
+    ],
+    "compatibleTags": [
+      "deception",
+      "dangerous_npc",
+      "vampire",
+      "trial",
+      "court",
+      "monster",
+      "social_pressure"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "low_stakes",
+      "cozy",
+      "peaceful"
+    ],
+    "compatibleCardIds": [
+      "npc_count_valtherion_the_fashionable_vampire",
+      "goal_three_garlic_courses"
+    ],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The scene uses a Suspicion meter from 0 to 5. It starts at 1. Suspicion increases when the player contradicts their role, gives implausible explanations, hesitates at dangerous moments, invents abilities, or makes Valtherion suspect poison or betrayal. At 5 Suspicion, Valtherion attacks and the scene is lost.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "Kami-sama declares: Suspicion is gravity. Every contradiction falls somewhere.",
+    "contentBoundary": "Do not make suspicion arbitrary. Increase it when the player creates genuine risk, breaks role, lies poorly, or acts suspiciously. Reward clever cooking, careful phrasing, and believable improvisation."
+  },
+  "generationHints": {
+    "tone": [
+      "tension",
+      "social survival",
+      "risk management"
+    ],
+    "preferredUse": "Use for scenes where words and small choices matter.",
+    "avoidUse": "Avoid with pure combat or purely cozy scenes."
+  },
+  "qualityNotes": [
+    "Adds clear lose condition.",
+    "Supports Kami-sama enforcement.",
+    "Good simple mechanic for MVP."
+  ],
+  "metadata": {
+    "author": "user",
+    "createdAt": "2026-05-04T00:00:00.000Z",
+    "updatedAt": "2026-09-26T09:25:35.839Z",
+    "source": "default_test_deck"
+  }
+}

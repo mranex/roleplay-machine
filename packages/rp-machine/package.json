@@ -1,0 +1,67 @@
+{
+  "name": "dsh-roleplay-machine",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Roleplay Machine: roleplay nông cho DeepSeek Harness — rút card lắp thế giới, thẻ ẩn nhân vật chính, chaos scale",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./card-schema": "./lib/card-schema.js",
+    "./scene": "./lib/scene.js",
+    "./runtime": "./lib/runtime.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-sidebar-right"
+      ]
+    },
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "build": "node scripts/bundle.mjs",
+    "typecheck": "tsc -p tsconfig.json"
+  },
+  "files": [
+    "lib/index.js",
+    "lib/card-schema.js",
+    "lib/scene.js",
+    "lib/runtime.js",
+    "lib/client.js",
+    "skills/**/*",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-skill-filesystem": "0.1.5-rc.2"
+  },
+  "devDependencies": {
+    "@deepseek-ai/cordis": "4.0.2",
+    "@deepseek-ai/dsh-skill-filesystem": "0.1.5-rc.2",
+    "@deepseek-ai/dsh-tools": "0.1.5-rc.2",
+    "@types/react": "18.3.12",
+    "@types/react-dom": "18.3.0",
+    "esbuild": "0.28.2",
+    "happy-dom": "^20.14.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "typescript": "^5.5.0"
+  },
+  "engines": {
+    "node": "^22.19.0 || ^24.0.0"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "roleplay",
+    "card-game"
+  ],
+  "license": "MIT"
+}

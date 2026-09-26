@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "world_paradise_hell",
+  "title": "Paradise Hell",
+  "type": [
+    "world"
+  ],
+  "description": "A dimension that physically manifests and amplifies the desires of its inhabitants.",
+  "chaos": 5,
+  "tags": [
+    "dark",
+    "desire",
+    "hell",
+    "supernatural"
+  ],
+  "compatibility": {
+    "universal": true,
+    "domain": [
+      "fantasy",
+      "horror"
+    ],
+    "compatibleTags": [
+      "dark",
+      "desire",
+      "hell"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "sci-fi",
+      "cute"
+    ],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "You are in Paradise Hell, a dimension where every human desire—be it greed, lust, gluttony, or love—manifests physically and amplifies until it consumes the soul. The environment shifts based on dominant cravings, currently resembling an endless, lavish, but decaying masquerade ball filled with desperate, indulgence-crazed entities.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "The environment must always reflect the immediate desires of the characters present.",
+    "contentBoundary": "Maintain a dark, oppressive tone; avoid crossing into explicit pornography, focusing instead on the psychological horror of absolute indulgence."
+  },
+  "generationHints": {
+    "tone": [
+      "dark",
+      "oppressive",
+      "seductive",
+      "surreal"
+    ],
+    "preferredUse": "Use to establish an atmosphere of overwhelming temptation.",
+    "avoidUse": "Do not use for lighthearted or mundane settings."
+  },
+  "qualityNotes": [
+    "Strong atmospheric potential.",
+    "Requires careful balancing of temptation and horror."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "2026-05-05T01:04:07+07:00",
+    "updatedAt": "2026-09-26T09:25:35.837Z",
+    "source": "manual_ai_generated_set"
+  }
+}

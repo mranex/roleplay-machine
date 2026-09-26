@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "world_crimson_fang_castle",
+  "title": "Crimson Fang Castle",
+  "type": [
+    "world"
+  ],
+  "description": "A remote medieval fantasy castle ruled by an ancient vampire lord who has just awakened after five hundred years of sleep.",
+  "chaos": 2,
+  "tags": [
+    "fantasy",
+    "medieval",
+    "vampire",
+    "castle",
+    "gothic",
+    "survival"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "fantasy",
+      "gothic"
+    ],
+    "compatibleTags": [
+      "vampire",
+      "castle",
+      "noble",
+      "monster",
+      "holy_knight",
+      "dark_comedy",
+      "survival"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "modern_office",
+      "space_opera",
+      "cyberpunk",
+      "cozy_school",
+      "hard_scifi"
+    ],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The scene takes place inside Crimson Fang Castle, a remote medieval fortress ruled by an ancient vampire lord who has just awakened after five hundred years. The castle is grand, decayed, candlelit, and filled with servants who are too frightened to speak honestly.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "Kami-sama declares: Crimson Fang Castle obeys gothic survival logic. Escape is not easy, servants are afraid, and every careless word may echo through stone halls.",
+    "contentBoundary": "Keep the setting focused on the castle, the kitchen, the vampire lord, and the immediate survival situation. Do not expand into a continent-wide war or deep ancient prophecy unless another selected card requires it."
+  },
+  "generationHints": {
+    "tone": [
+      "gothic comedy",
+      "survival tension",
+      "medieval fantasy"
+    ],
+    "preferredUse": "Use for short scenes involving castles, vampires, servants, nobles, hidden plots, and survival deception.",
+    "avoidUse": "Avoid pairing with modern office, cyberpunk, hard sci-fi, or cozy slice-of-life scenes unless a chaos card explicitly bridges the contradiction."
+  },
+  "qualityNotes": [
+    "Grounded enough to support roleplay.",
+    "Strong vampire fantasy anchor.",
+    "Works well with deception, food, noble NPCs, and hidden rescue plots."
+  ],
+  "metadata": {
+    "author": "user",
+    "createdAt": "2026-05-04T00:00:00.000Z",
+    "updatedAt": "2026-09-26T09:25:35.836Z",
+    "source": "default_test_deck"
+  }
+}

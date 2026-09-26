@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "world_endless_jungle",
+  "title": "Endless Jungle",
+  "type": [
+    "world"
+  ],
+  "description": "A vast, unbroken jungle where every direction is filled with massive trees, tangled vines, and dense undergrowth. No clearings, no roads—only the primordial forest stretching endlessly.",
+  "chaos": 4,
+  "tags": [
+    "jungle",
+    "dense",
+    "endless",
+    "wilderness",
+    "oppressive",
+    "claustrophobic"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "fantasy",
+      "adventure",
+      "survival"
+    ],
+    "compatibleTags": [
+      "jungle",
+      "forest",
+      "nature",
+      "wilderness",
+      "survival",
+      "exploration"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "city",
+      "urban",
+      "desert",
+      "tundra",
+      "open_plains",
+      "clearing"
+    ],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The world is a colossal, unbroken jungle. Every space between trunks is choked with ferns, vines, and rotting logs. The canopy above is so thick that sunlight breaks through only as scattered golden motes. There is no path, no clearing, no escape from the pressing vegetation. The air is heavy with humidity and the scent of wet earth. Sounds of unseen creatures echo constantly.",
+    "firstMessage": "Your eyes adjust to the dim green light as you push through another curtain of vines. The jungle stretches in every direction, an endless maze of moss-covered trunks and tangled roots. A bird shrieks somewhere high above, and a sticky warmth clings to your skin. You realize there is no trail behind you—the forest has already swallowed your passage.",
+    "hiddenTruth": "",
+    "heavenRule": "Kami-sama ensures that no clearing, open space, or path wider than a narrow animal trail can persist. Trees and vegetation will always grow to fill any gap, making the jungle perpetually dense and unchanging.",
+    "contentBoundary": "No scene can take place in an open area. All locations must be within the dense jungle environment. Attempts to find or create clearings fail."
+  },
+  "generationHints": {
+    "tone": [
+      "oppressive",
+      "mysterious",
+      "humid",
+      "primordial"
+    ],
+    "preferredUse": "Use to create a setting where the environment itself is an obstacle, forcing characters to navigate through unrelenting vegetation.",
+    "avoidUse": "Avoid placing scenes in open clearings, ruins without vegetation, or any location where trees are absent."
+  },
+  "qualityNotes": [
+    "Reinforce the feeling of no escape from the jungle.",
+    "Describe the constant presence of trees, vines, and undergrowth in every scene.",
+    "Use sensory details: humidity, sounds, smells."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.837Z",
+    "source": "manual_ai_generated"
+  }
+}

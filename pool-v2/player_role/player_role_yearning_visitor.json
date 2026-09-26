@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "player_role_yearning_visitor",
+  "title": "The Yearning Visitor",
+  "type": [
+    "player_role"
+  ],
+  "description": "You are an ordinary person from the real world, trapped here by a deep, unspoken longing. You have no special powers, no knowledge of this place, no authority, and no memory of how you arrived. Your past is hazy, and your true name feels distant. All you have is a growing, nagging sense that something is deeply wrong beneath the silk and sighs.",
+  "chaos": 1,
+  "tags": [
+    "nsfw",
+    "desire",
+    "psychological",
+    "visitor",
+    "memory loss"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [],
+    "compatibleTags": [
+      "nsfw",
+      "surreal",
+      "desire",
+      "labyrinth",
+      "psychological"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "You are an ordinary visitor, trapped in a dream of pleasure, with no special abilities and a fading identity.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "You cannot invent new abilities, knowledge, or backstory. Your only resources are your wits, your fading memories, and your growing unease.",
+    "contentBoundary": "Player must stay within the defined role of a mundane person; no secret powers, sudden combat skills, or world-breaking revelations."
+  },
+  "generationHints": {
+    "tone": [
+      "confused",
+      "longing",
+      "dread"
+    ],
+    "preferredUse": "To strictly define the player character's limitations and emotional core.",
+    "avoidUse": "Do not allow the player to define their own identity or past beyond the vague longing provided."
+  },
+  "qualityNotes": [
+    "Emphasize the internal conflict between desire and the instinct to escape."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.838Z",
+    "source": "manual_ai_generated_set"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "goal_three_garlic_courses",
+  "title": "Three Garlic Courses",
+  "type": [
+    "goal"
+  ],
+  "description": "The player must convince the vampire to eat three separate dishes containing garlic so hidden knights can finish him off.",
+  "chaos": 3,
+  "tags": [
+    "goal",
+    "garlic",
+    "food",
+    "vampire",
+    "deception",
+    "three_steps",
+    "survival"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "fantasy",
+      "food",
+      "vampire"
+    ],
+    "compatibleTags": [
+      "chef",
+      "kitchen",
+      "vampire",
+      "deception",
+      "castle",
+      "hidden_knights",
+      "dark_comedy"
+    ],
+    "requiredAnyTags": [
+      "vampire"
+    ],
+    "requiredAllTags": [
+      "food"
+    ],
+    "incompatibleTags": [
+      "no_food",
+      "modern_office",
+      "hard_scifi",
+      "peaceful"
+    ],
+    "compatibleCardIds": [
+      "player_role_vampire_chefs_unlucky_replacement",
+      "npc_count_valtherion_the_fashionable_vampire",
+      "hidden_knights_beneath_the_kitchen"
+    ],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The player's goal is to make Count Valtherion eat three separate dishes that contain garlic. Each dish must be presented believably as refined, fashionable, or culturally important. The player wins if Valtherion eats all three courses before Suspicion reaches 5.",
+    "firstMessage": "",
+    "hiddenTruth": "The garlic is not enough to kill Valtherion alone. It weakens him so the hidden knights beneath the kitchen can strike.",
+    "heavenRule": "Kami-sama declares: One garlic dish is a prank. Two is a pattern. Three is fate.",
+    "contentBoundary": "The goal must be solved through cooking, presentation, deception, and timing. The player cannot simply throw garlic at Valtherion, stab him, or claim garlic is instantly lethal unless supported by another card."
+  },
+  "generationHints": {
+    "tone": [
+      "culinary deception",
+      "dark comedy",
+      "structured challenge"
+    ],
+    "preferredUse": "Use with chef roles, vampire NPCs, and multi-step deception.",
+    "avoidUse": "Avoid in scenes without food preparation or vampire weakness logic."
+  },
+  "qualityNotes": [
+    "Clear win condition.",
+    "Supports 3-act mini-structure.",
+    "Funny but playable."
+  ],
+  "metadata": {
+    "author": "user",
+    "createdAt": "2026-05-04T00:00:00.000Z",
+    "updatedAt": "2026-09-26T09:25:35.840Z",
+    "source": "default_test_deck"
+  }
+}

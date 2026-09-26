@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "hidden_truth_parasite_labyrinth",
+  "title": "The Parasite Labyrinth",
+  "type": [
+    "hidden_truth"
+  ],
+  "description": "GM-only text revealing the true nature of the Velvet Labyrinth.",
+  "chaos": 4,
+  "tags": [
+    "nsfw",
+    "hidden",
+    "parasite",
+    "reality",
+    "gm_only"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [],
+    "compatibleTags": [
+      "nsfw",
+      "surreal",
+      "desire",
+      "labyrinth",
+      "psychological"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "gm_only",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The labyrinth is a parasitic entity. Mira is a projection. Escape requires rejecting it all.",
+    "firstMessage": "",
+    "hiddenTruth": "The Velvet Labyrinth is a sentient, interdimensional parasite that feeds on human longing. Mira is a construct woven from the deepest fantasies of every visitor. The exit only manifests when the visitor fully accepts the pain of their real-world life, stops wanting, and rejects the fantasy — an agony like tearing out a part of themselves. Most never manage it.",
+    "heavenRule": "Reveal this truth through environmental clues (walls that throb, Mira's eyes momentarily vacant, glimpses of a grey wasteland behind tapestries) and Mira's possessive slips. Never reveal it directly until the climax.",
+    "contentBoundary": "The truth should erode the fantasy, turning pleasure into horror when the player is ready to see."
+  },
+  "generationHints": {
+    "tone": [
+      "horror",
+      "revelatory",
+      "cosmic"
+    ],
+    "preferredUse": "To transform the scene from erotic to existential horror at the right moment.",
+    "avoidUse": "Do not infodump; let the player earn the truth."
+  },
+  "qualityNotes": [
+    "The big reveal should feel like a gut punch, making previous pleasures feel tainted."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.840Z",
+    "source": "manual_ai_generated_set"
+  }
+}

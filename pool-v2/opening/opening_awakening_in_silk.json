@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "opening_awakening_in_silk",
+  "title": "Awakening in Silk",
+  "type": [
+    "opening"
+  ],
+  "description": "You awaken in a luxurious bedroom, disoriented, as a gorgeous woman welcomes you back from a long dream.",
+  "chaos": 1,
+  "tags": [
+    "nsfw",
+    "opening",
+    "seduction",
+    "dreamlike"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [],
+    "compatibleTags": [
+      "nsfw",
+      "surreal",
+      "desire",
+      "labyrinth",
+      "psychological"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The player awakens in a lavish bedroom, greeted by Mira, who promises to care for their every need.",
+    "firstMessage": "You awaken on silk sheets in a room bathed in soft amber light. The air is thick with the scent of jasmine and something sweeter, muskier. A woman with cascading dark hair and eyes like liquid night leans over you, her smile a promise of every pleasure. 'Welcome back, my sweet. You've been dreaming so long. Let me take care of everything.' Her fingers trace your jawline, sending a shiver through your foggy mind.",
+    "hiddenTruth": "",
+    "heavenRule": "The opening sets a seductive, slightly unsettling tone. The player feels safe but confused.",
+    "contentBoundary": "Keep the invitation sensual but not overtly explicit in the first message; build tension."
+  },
+  "generationHints": {
+    "tone": [
+      "intimate",
+      "dreamy",
+      "warm"
+    ],
+    "preferredUse": "As the initial message in a SillyTavern or KoboldCpp roleplay.",
+    "avoidUse": "Avoid immediate demands or plot dumps; let the scene breathe."
+  },
+  "qualityNotes": [
+    "Make the player feel cared for while hinting at memory gaps."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.839Z",
+    "source": "manual_ai_generated_set"
+  }
+}

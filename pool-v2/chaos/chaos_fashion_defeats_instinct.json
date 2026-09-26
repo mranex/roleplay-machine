@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "chaos_fashion_defeats_instinct",
+  "title": "Fashion Defeats Instinct",
+  "type": [
+    "chaos"
+  ],
+  "description": "In this scene, convincing social performance can temporarily override supernatural instinct if framed as elite fashion.",
+  "chaos": 4,
+  "tags": [
+    "chaos",
+    "fashion",
+    "vampire",
+    "deception",
+    "dark_comedy",
+    "social_logic",
+    "absurd_but_playable"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "dark_comedy",
+      "social_absurdity"
+    ],
+    "compatibleTags": [
+      "noble",
+      "vampire",
+      "fashion",
+      "deception",
+      "food",
+      "court",
+      "aristocrat"
+    ],
+    "requiredAnyTags": [
+      "noble",
+      "fashion",
+      "vampire",
+      "aristocrat"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "hard_scifi",
+      "pure_horror",
+      "realistic_military",
+      "low_stakes_cozy"
+    ],
+    "compatibleCardIds": [
+      "npc_count_valtherion_the_fashionable_vampire",
+      "goal_three_garlic_courses"
+    ],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "A chaos rule affects the scene: sufficiently confident claims about elite fashion, aristocratic taste, or modern refinement can temporarily override Count Valtherion's supernatural instincts. This does not make him stupid. It makes his vanity exploitable. The more absurd the claim, the better the presentation must be.",
+    "firstMessage": "",
+    "hiddenTruth": "Valtherion once lost status among vampires for being considered old-fashioned. He is terrified of repeating that humiliation.",
+    "heavenRule": "Kami-sama declares: In this castle, fashion is not truth, but it may bully truth into silence for one course at a time.",
+    "contentBoundary": "The chaos rule should create opportunities, not instant wins. The player must still present each lie with culinary logic, confidence, and social awareness."
+  },
+  "generationHints": {
+    "tone": [
+      "absurd but playable",
+      "dark comedy",
+      "social manipulation"
+    ],
+    "preferredUse": "Use when the scene should reward stylish nonsense, confident deception, and comedic social pressure.",
+    "avoidUse": "Avoid with grim, realistic horror where absurd social logic would break tone."
+  },
+  "qualityNotes": [
+    "Creates the main comedic engine.",
+    "Makes the garlic plan plausible.",
+    "High chaos without destroying playability."
+  ],
+  "metadata": {
+    "author": "user",
+    "createdAt": "2026-05-04T00:00:00.000Z",
+    "updatedAt": "2026-09-26T09:25:35.840Z",
+    "source": "default_test_deck"
+  }
+}

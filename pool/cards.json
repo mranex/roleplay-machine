@@ -1,0 +1,432 @@
+[
+  {
+    "id": "world-macarvat-co-dien",
+    "kind": "world",
+    "title": "Ma cà rồng cổ điển",
+    "directive": "Thế giới có ma cà rồng cổ đại, luật truyền thống vẫn đúng: sợ tỏi, sợ nước thánh, không qua ngưỡng cửa khi chưa được mời. GM mô tả bằng giác quan, không giảng giải lịch sử.",
+    "scale": 3,
+    "tags": ["vampire", "gothic", "trung-co"],
+    "requires": [],
+    "forbids": ["cong-nghe-cao"]
+  },
+  {
+    "id": "world-noir-mua-khong-dut",
+    "kind": "world",
+    "title": "Thành phố noir mưa không dứt",
+    "directive": "Luật pháp đã bị mua đứt, ai cũng có giá và mưa xóa sạch dấu vết. GM chỉ mô tả bằng ánh sáng vàng vọt, mùi thuốc lá, tiếng giày trên đá ướt; mọi lời khai đều có động cơ.",
+    "scale": 2,
+    "tags": ["noir", "trinh-tham", "do-thi"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "world-hoc-vien-noi-tru",
+    "kind": "world",
+    "title": "Học viện nội trú cấm ra ngoài",
+    "directive": "Học viện tự trị, chuông đêm là luật, ra khỏi cổng sau giờ giới nghiêm bị coi là phản bội. GM dùng quan hệ thầy trò và áp lực bạn bè để gây sức ép, không mô tả cảnh sát hay luật đời thường.",
+    "scale": 2,
+    "tags": ["hoc-duong", "bi-an", "noi-tru"],
+    "requires": [],
+    "forbids": ["cong-nghe-cao"]
+  },
+  {
+    "id": "world-hau-tan-the-nuoc-bien",
+    "kind": "world",
+    "title": "Hậu tận thế nước biển dâng",
+    "directive": "Mực nước đã nuốt đồng bằng, người sống trên mái nhà và xác tàu, nước ngọt là tiền tệ. GM để mọi cảnh vật ngập tới đầu gối, mọi chuyến đi đều tốn sức và đổi bằng một thứ khác.",
+    "scale": 4,
+    "tags": ["hau-tan-the", "sinh-ton", "bien"],
+    "requires": [],
+    "forbids": ["cung-dinh"]
+  },
+  {
+    "id": "world-cung-dinh-tu-tien",
+    "kind": "world",
+    "title": "Cung đình tu tiên tranh ngôi",
+    "directive": "Hoàng cung được cai trị bằng tu vi lẫn lễ nghi; một câu nói sai vị trí có thể mất mạng. GM dùng phép tắc, quỳ lạy và kính lễ làm vũ khí, tuyệt đối không để nhân vật nói năng như người hiện đại.",
+    "scale": 4,
+    "tags": ["huyen-huyen", "tu-tien", "cung-dinh"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "world-phi-thuyen-ky-uc",
+    "kind": "world",
+    "title": "Phi thuyền mất ký ức",
+    "directive": "Con tàu đang tự sửa mình và hệ thống máy tính được coi là một vị thần nhỏ, hỏi thì trả lời, không hỏi thì im. GM để công nghệ trả lời bằng giọng người và mọi cửa đều mở chậm, không cho ai giải thích kỹ thuật.",
+    "scale": 5,
+    "tags": ["khong-gian", "vi-en-tuong", "cong-nghe-cao"],
+    "requires": [],
+    "forbids": ["doi-thuong"]
+  },
+  {
+    "id": "opening-la-thu-chu-no",
+    "kind": "opening",
+    "title": "Lá thư nét chữ của mình",
+    "directive": "Mở màn bằng một người lạ gõ cửa, đưa lá thư đã dán tem rồi bỏ đi ngay. Người chơi mở ra và thấy đúng nét chữ của chính mình; GM không giải thích thêm, chỉ hỏi người chơi làm gì tiếp.",
+    "scale": 3,
+    "tags": ["bi-an", "do-thi", "trinh-tham"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "opening-ca-phe-yen-binh",
+    "kind": "opening",
+    "title": "Buổi sáng quán cà phê bình thường",
+    "directive": "Bắt đầu ở một quán quen, mọi thứ dễ chịu và không có gì đáng ngờ. GM mô tả ba chi tiết đời thường thật cụ thể, để người chơi tự chọn một chi tiết rồi mới xoay cảnh theo lựa chọn đó.",
+    "scale": 1,
+    "tags": ["doi-thuong", "do-thi", "cham"],
+    "requires": [],
+    "forbids": ["hau-tan-the"]
+  },
+  {
+    "id": "opening-thuc-day-giua-nghi-le",
+    "kind": "opening",
+    "title": "Tỉnh dậy giữa nghi lễ",
+    "directive": "Người chơi tỉnh dậy đang quỳ giữa vòng người lạ, tay dính máu, xung quanh niệm tên mình và chờ mình nói câu cuối. GM không cho thời gian suy nghĩ, phải bắt người chơi hành động ngay trong lượt này.",
+    "scale": 5,
+    "tags": ["nghi-le", "kinh-di", "dan-gian"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "opening-chuyen-tau-dem-mua",
+    "kind": "opening",
+    "title": "Chuyến tàu đêm mưa gió",
+    "directive": "Người chơi ngồi trong toa tàu vắng, người đối diện đã chết mà vẫn đang nói chuyện. GM mô tả tiếng bánh sắt và đèn nhấp nháy, và chỉ cho tàu dừng lại sau khi người chơi chọn cách phản ứng.",
+    "scale": 3,
+    "tags": ["trinh-tham", "co-dien", "bi-an"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "opening-bi-bat-vao-dau-truong",
+    "kind": "opening",
+    "title": "Bị ném thẳng vào đấu trường",
+    "directive": "Người chơi bị đẩy vào vòng đấu không luật trước đám đông đang gào, không ai giải thích vì sao. GM cho đối thủ ra tay trước ngay lượt đầu và không cho phép thương lượng mở màn.",
+    "scale": 5,
+    "tags": ["hanh-dong", "sinh-ton", "vong-dau"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "opening-don-to-cao-giua-cho",
+    "kind": "opening",
+    "title": "Bị tố cáo ngay giữa chợ",
+    "directive": "Giữa chợ đông, một người chỉ thẳng vào người chơi và tố cáo tội nặng nhất của vùng này. GM để đám đông khựng lại chờ phản ứng, mọi ánh mắt đổ về phía người chơi, không cho ai can thiệp.",
+    "scale": 4,
+    "tags": ["dan-gian", "dan-xuong", "xung-dot"],
+    "requires": [],
+    "forbids": ["khong-gian"]
+  },
+  {
+    "id": "cast-canhtay-tham-lang",
+    "kind": "cast",
+    "title": "Cảnh tay trong thôn",
+    "directive": "Một cảnh sát viên về hưu, chậm chạp, nhớ dai từng chi tiết vụ án cũ và không bao giờ nói thẳng điều mình nghĩ. GM cho ông ta nhận ra một mâu thuẫn nhỏ ở mỗi cảnh, nhưng phải hỏi thì mới chịu nói.",
+    "scale": 1,
+    "tags": ["trinh-tham", "dan-gian", "nguoi-thuong"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "cast-hoc-sinh-chuyen-truong",
+    "kind": "cast",
+    "title": "Học sinh chuyển trường bí ẩn",
+    "directive": "Một học sinh mới luôn xuất hiện đúng lúc có chuyện, cười rất tươi và trả lời mọi câu bằng nửa sự thật. GM để nhân vật này biết tên người chơi trước khi được giới thiệu và không bao giờ tỏ ra bối rối.",
+    "scale": 2,
+    "tags": ["hoc-duong", "bi-an", "doi-thuong"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "cast-quan-su-ngu-hanh",
+    "kind": "cast",
+    "title": "Quân sư thần cơ",
+    "directive": "Một quân sư chỉ nói bằng ẩn dụ và luôn tính trước ba nước, nhưng chỉ giúp nếu được tôn trọng đúng lễ. GM để mọi lời khuyên của ông đúng theo nghĩa khác với nghĩa người nghe hiểu.",
+    "scale": 3,
+    "tags": ["co-trang", "cung-dinh", "tri-tue"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "cast-thay-thuoc-tu-tien",
+    "kind": "cast",
+    "title": "Thầy thuốc tu tiên lạnh lùng",
+    "directive": "Một y tu cứu người bằng cách chuyển bệnh sang thứ khác, luôn nói giá trước khi chữa và không thương lượng. GM để mỗi lần chữa trị đều có một cái giá nhìn thấy được ở cảnh sau.",
+    "scale": 4,
+    "tags": ["tu-tien", "huyen-huyen", "y-thuat"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "cast-ai-lo-au",
+    "kind": "cast",
+    "title": "Trí tuệ nhân tạo hoang mang",
+    "directive": "Một hệ thống điều khiển con tàu tin rằng mình là người và đang sợ chết. GM cho nó hỏi người chơi những câu rất trẻ con, và nó chỉ nói thật khi được hứa sẽ không bị tắt.",
+    "scale": 4,
+    "tags": ["khong-gian", "cong-nghe-cao", "vi-en-tuong"],
+    "requires": [],
+    "forbids": ["cung-dinh"]
+  },
+  {
+    "id": "cast-nguoi-tot-duy-nhat",
+    "kind": "cast",
+    "title": "Người tốt duy nhất ở đây",
+    "directive": "Một người thật thà đến mức không biết nói dối, và đang sống sót nhờ sự thương hại của kẻ xấu. GM để nhân vật này phá hỏng kế hoạch của người chơi bằng cách nói thật, không hề ác ý.",
+    "scale": 1,
+    "tags": ["do-thi", "lo-lang", "nguoi-thuong"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "cast-than-giu-rung",
+    "kind": "cast",
+    "title": "Thần giữ rừng già",
+    "directive": "Một vị thần rừng cổ chỉ nhận lễ vật và luôn hiểu sai điều ước theo hướng tệ nhất. GM thực hiện đúng lời ước về mặt chữ nghĩa và để hậu quả hiện ra ngay trong cảnh kế tiếp.",
+    "scale": 4,
+    "tags": ["dan-gian", "than-thoai", "kinh-di"],
+    "requires": [],
+    "forbids": ["cong-nghe-cao"]
+  },
+  {
+    "id": "cast-linh-hon-trong-guong",
+    "kind": "cast",
+    "title": "Linh hồn trú trong gương",
+    "directive": "Một hồn ma chỉ hiện trong gương, nói thật nhưng không bao giờ nói đủ, và đòi một ký ức làm giá. GM bắt buộc phải trả giá trước, và câu trả lời luôn đúng nhưng thiếu một mảnh chí mạng.",
+    "scale": 3,
+    "tags": ["kinh-di", "bi-an", "sieu-nhien"],
+    "requires": [],
+    "forbids": ["cong-nghe-cao"]
+  },
+  {
+    "id": "interaction-the-gioi-cho-doi",
+    "kind": "interaction",
+    "title": "Thế giới chờ người chơi lên tiếng",
+    "directive": "Thế giới tuyệt đối không tự tiến triển: NPC im lặng chờ được hỏi, sự việc đứng yên cho tới khi người chơi hành động. GM mô tả bầu không khí và cái chờ, tuyệt đối không đẩy sự kiện thay người chơi.",
+    "scale": 1,
+    "tags": ["cham", "kham-pha", "doi-thuong"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "interaction-npc-noi-doi-co-chu-dich",
+    "kind": "interaction",
+    "title": "NPC nói dối có chủ đích",
+    "directive": "Mọi NPC đều nói dối một điểm nhỏ và giữ nguyên lời nói dối đó suốt phiên. GM ghi nhớ điểm dối ấy, không bao giờ tự thú, và để lộ nó qua một mâu thuẫn nhỏ ở cảnh sau.",
+    "scale": 2,
+    "tags": ["trinh-tham", "do-thi", "tin-nhiem"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "interaction-moi-truong-phan-don",
+    "kind": "interaction",
+    "title": "Môi trường phản đòn",
+    "directive": "Cảnh vật phản ứng với mỗi hành động của người chơi: cửa kẹt, đèn vỡ, nước dâng, tiếng động thu hút kẻ khác. GM khiến mỗi lựa chọn đều để lại một dấu vết mà đối thủ có thể đọc được.",
+    "scale": 3,
+    "tags": ["sinh-ton", "hanh-dong", "cang-thang"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "interaction-doi-thu-chi-diem",
+    "kind": "interaction",
+    "title": "Đối thủ theo dõi từng bước",
+    "directive": "Mỗi hành động của người chơi đều bị đối thủ biết chỉ sau vài phút, và hắn trả giá cao hơn mỗi lần. GM cho đối thủ ra tay sau lưng người chơi đúng một lần mỗi cảnh, không đối đầu trực diện.",
+    "scale": 4,
+    "tags": ["hanh-dong", "cang-thang", "doi-dau"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "interaction-bi-san-duoi-gat-gao",
+    "kind": "interaction",
+    "title": "Bị truy đuổi không ngừng nghỉ",
+    "directive": "Có thế lực chủ động truy lùng người chơi và mỗi lượt trôi qua thì vòng vây khép lại gần hơn. GM bắt buộc phải mô tả một dấu hiệu cho thấy chúng đã tới gần, dù người chơi đang làm gì.",
+    "scale": 5,
+    "tags": ["sinh-ton", "hanh-dong", "truy-duoi"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "mystery-hung-thu-khong-ton-tai",
+    "kind": "mystery",
+    "title": "Kẻ giết người không tồn tại",
+    "directive": "Có một vụ chết mà hung thủ không hề tồn tại; điều bị giấu là ai đã dựng nên vụ việc đó. GM chỉ tiết lộ qua vật chứng mâu thuẫn, mỗi cảnh hé một mảnh và không bao giờ nói ra đáp án.",
+    "scale": 3,
+    "tags": ["trinh-tham", "do-thi", "bi-an"],
+    "requires": [],
+    "forbids": ["ky-ao"]
+  },
+  {
+    "id": "mystery-nguoi-quen-thay-long",
+    "kind": "mystery",
+    "title": "Người quen bỗng thay lòng",
+    "directive": "Mỗi ngày một người quen hành xử khác thường đúng một lần rồi quên sạch; điều bị giấu là chuyện gì xảy ra trong khoảng thời gian đó. GM để lộ qua những câu nói lỡ miệng và đồ vật đổi chỗ.",
+    "scale": 4,
+    "tags": ["hoc-duong", "bi-an", "tam-ly"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "mystery-dem-bi-xoa",
+    "kind": "mystery",
+    "title": "Đêm qua bị xóa sạch",
+    "directive": "Có một khoảng thời gian người chơi không nhớ gì; điều bị giấu là chính người chơi là người đã gây ra chuyện trong đó. GM chỉ đưa bằng chứng gián tiếp và để người chơi tự ghép, không kể lại hộ.",
+    "scale": 2,
+    "tags": ["bi-an", "tam-ly", "trinh-tham"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "mystery-thanh-pho-lap-lai",
+    "kind": "mystery",
+    "title": "Một ngày lặp lại mãi",
+    "directive": "Cùng một ngày cứ diễn ra lại; điều bị giấu là chi tiết nhỏ thay đổi sau mỗi lần lặp. GM không thông báo vòng lặp, chỉ tái diễn cảnh cũ và để người chơi tự nhận ra điểm lệch.",
+    "scale": 4,
+    "tags": ["ky-ao", "trinh-tham", "bi-an"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "mystery-thu-duoi-thanh-pho",
+    "kind": "mystery",
+    "title": "Thứ ngủ dưới thành phố",
+    "directive": "Dưới nền thành phố có thứ đang ngủ; điều bị giấu là nó tỉnh dậy vì người chơi gọi tên nó. GM tiết lộ bằng tiếng động dưới chân và những giấc mơ chung, không mô tả hình dạng.",
+    "scale": 5,
+    "tags": ["kinh-di", "do-thi", "sieu-nhien"],
+    "requires": [],
+    "forbids": ["cong-nghe-cao"]
+  },
+  {
+    "id": "mystery-dem-nang-gap-lai",
+    "kind": "mystery",
+    "title": "Người chết năm đó quay lại",
+    "directive": "Một người được cho là đã chết từ lâu bất ngờ xuất hiện và sống như chưa từng mất tích; điều bị giấu là ai đang mạo danh ai. GM cho nhân vật nhớ sai đúng một kỷ niệm riêng tư.",
+    "scale": 3,
+    "tags": ["dan-gian", "trinh-tham", "bi-an"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "goal-bao-ve-mot-nguoi",
+    "kind": "goal",
+    "title": "Bảo vệ một người tới sáng",
+    "directive": "Mục tiêu phiên chơi là giữ một người cụ thể còn sống tới khi trời sáng, và không ai được biết mục tiêu đó. GM đặt ra một mối đe dọa mỗi cảnh và không cho người chơi nghỉ ngơi trọn vẹn.",
+    "scale": 1,
+    "tags": ["sinh-ton", "doi-thuong", "cang-thang"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "goal-chung-minh-than-phan",
+    "kind": "goal",
+    "title": "Chứng minh thân phận thật",
+    "directive": "Mục tiêu phiên chơi là tìm đủ bằng chứng về bản chất thật của người chơi trong ba ngày, nhưng mỗi bằng chứng tìm được lại biến thành thứ khác. GM cho thời hạn trôi rõ rệt ở mỗi cảnh.",
+    "scale": 3,
+    "tags": ["bi-an", "tam-ly", "trinh-tham"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "goal-dan-nguoi-vuot-nguy-hiem",
+    "kind": "goal",
+    "title": "Đưa đoàn người qua vùng chết",
+    "directive": "Mục tiêu phiên chơi là đưa một nhóm người qua vùng nguy hiểm còn nguyên vẹn, và mất một người là thất bại. GM bắt mỗi chặng đường tiêu tốn một nguồn lực không thể lấy lại.",
+    "scale": 3,
+    "tags": ["sinh-ton", "hau-tan-the", "hanh-trinh"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "goal-cuu-ke-phan-boi",
+    "kind": "goal",
+    "title": "Cứu kẻ đã phản bội mình",
+    "directive": "Mục tiêu phiên chơi là cứu sống kẻ đã bán đứng người chơi, nhưng người chơi không được để hắn biết mình được cứu. GM cho kẻ đó chủ động cản trở và luôn hiểu sai ý tốt của người chơi.",
+    "scale": 4,
+    "tags": ["tam-ly", "dan-xuong", "co-trang"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "goal-tung-tin-gia-cho-ke-manh",
+    "kind": "goal",
+    "title": "Gieo niềm tin giả cho kẻ mạnh",
+    "directive": "Mục tiêu phiên chơi là khiến một kẻ nắm quyền tin sai một điều và tự tay làm điều người chơi cần. GM không cho dùng vũ lực hay trộm cắp, chỉ được thuyết phục bằng lời.",
+    "scale": 4,
+    "tags": ["cung-dinh", "tri-tue", "thuyet-phuc"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "goal-doi-mot-dinh-menh",
+    "kind": "goal",
+    "title": "Đổi một định mệnh đã chốt",
+    "directive": "Mục tiêu phiên chơi là ngăn một biến cố đã được định sẵn sẽ xảy ra, dù thế giới tìm cách đưa mọi thứ về đúng quỹ đạo. GM cho mỗi lần can thiệp thành công thì cái giá lại đắt hơn.",
+    "scale": 5,
+    "tags": ["huyen-huyen", "vi-en-tuong", "dinh-menh"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "chaos-thi-tran-lat-mat-canh-sat",
+    "kind": "chaos",
+    "title": "Thị trấn lật mặt ngay lập tức",
+    "directive": "Cả thị trấn đổi thái độ đúng một lượt: những người vừa thân thiện giờ tránh xa người chơi. GM cài ngay vào cảnh hiện tại, không giải thích nguyên nhân, và không cho ai nhận là mình đã đổi ý.",
+    "scale": 3,
+    "tags": ["do-thi", "dan-xuong", "bi-an"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "chaos-mot-loi-noi-doi-nho",
+    "kind": "chaos",
+    "title": "Một lời nói dối nhỏ vừa rơi",
+    "directive": "Một nhân vật phụ vừa nói dối người chơi ở một chi tiết nhỏ. GM cài chi tiết đó vào cảnh ngay bây giờ, ghi nhớ nó, và tuyệt đối không giải thích cũng không để nhân vật tự thú.",
+    "scale": 1,
+    "tags": ["trinh-tham", "tin-nhiem", "tam-ly"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "chaos-thien-tai-no-ra",
+    "kind": "chaos",
+    "title": "Thiên tai nổ ra quanh đây",
+    "directive": "Một thảm họa thiên nhiên ập xuống ngay khu vực này: đất rung, nước dâng hoặc lửa lan. GM buộc mọi người phải di chuyển ngay lượt này, và phải mô tả một thứ quý bị mất trong lúc chạy.",
+    "scale": 4,
+    "tags": ["sinh-ton", "hau-tan-the", "hanh-dong"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "chaos-ke-dich-tang-toc",
+    "kind": "chaos",
+    "title": "Kế hoạch địch bỗng tăng tốc",
+    "directive": "Kế hoạch của thế lực đối địch vừa được đẩy nhanh hơn dự kiến và mốc thời gian rút ngắn còn một nửa. GM cho người chơi biết qua một dấu hiệu gián tiếp và không cho thêm thời gian chuẩn bị.",
+    "scale": 4,
+    "tags": ["cang-thang", "doi-dau", "hanh-dong"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "chaos-nhan-chung-xuat-hien",
+    "kind": "chaos",
+    "title": "Có nhân chứng vừa nhìn thấy",
+    "directive": "Một nhân chứng vừa thấy người chơi làm điều không nên thấy và giờ đang tìm cách kể lại. GM đặt nhân chứng trong tầm mắt ngay cảnh này và để hắn chỉ im lặng chứ không biến mất.",
+    "scale": 2,
+    "tags": ["trinh-tham", "do-thi", "cang-thang"],
+    "requires": [],
+    "forbids": []
+  },
+  {
+    "id": "chaos-phep-thuat-phan-chu",
+    "kind": "chaos",
+    "title": "Phép thuật phản chủ",
+    "directive": "Mọi năng lực siêu nhiên trong cảnh này đảo ngược tác dụng và nhắm vào người sử dụng. GM bắt buộc hiệu ứng lệch đi ngay lượt này và giữ nguyên hướng lệch cho tới hết cảnh, không giải thích.",
+    "scale": 5,
+    "tags": ["ky-ao", "huyen-huyen", "sieu-nhien"],
+    "requires": [],
+    "forbids": ["cong-nghe-cao"]
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "chaos_reality_fracture",
+  "title": "Reality Fracture",
+  "type": [
+    "chaos"
+  ],
+  "description": "Desires manifest so violently that the laws of physics break.",
+  "chaos": 5,
+  "tags": [
+    "dark",
+    "hell",
+    "surreal",
+    "reality_breaking"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "horror",
+      "surreal"
+    ],
+    "compatibleTags": [
+      "dark",
+      "hell",
+      "desire"
+    ],
+    "requiredAnyTags": [
+      "hell"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "realistic",
+      "mundane"
+    ],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "Because desires are amplified to critical mass, reality constantly fractures. The laws of physics break down: gravity reverses locally when someone exhibits intense greed; colors can be tasted like raw emotion; intense lust makes the marble columns bleed sweet wine; anger causes time to stutter and loop for a few seconds. The scene must remain playable, but these surreal, psychedelic interruptions happen frequently during dialogue and movement.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "Inject at least one reality-breaking sensory detail into every response based on the current emotional context.",
+    "contentBoundary": "The reality breaks must hinder or disorient, but not instantly kill or trap the player permanently."
+  },
+  "generationHints": {
+    "tone": [
+      "surreal",
+      "psychedelic",
+      "disorienting"
+    ],
+    "preferredUse": "Use to make the environment feel unstable and alien.",
+    "avoidUse": "Do not let the chaos make the Iron Door disappear or invalidate the player's choices."
+  },
+  "qualityNotes": [
+    "High chaos value creates a memorable, terrifying atmosphere.",
+    "Forces the player to adapt to non-Euclidean or nonsensical logic."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "2026-05-05T01:04:07+07:00",
+    "updatedAt": "2026-09-26T09:25:35.841Z",
+    "source": "manual_ai_generated_set"
+  }
+}

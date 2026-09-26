@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "world_velvet_labyrinth",
+  "title": "The Velvet Labyrinth",
+  "type": [
+    "world"
+  ],
+  "description": "A shifting sensual dreamscape that manifests every carnal desire, but every corridor curves back to pleasure. Doors lead to impossibly lavish chambers, corridors whisper with sighs, and the air is thick with heady perfume. Nothing is entirely real.",
+  "chaos": 2,
+  "tags": [
+    "nsfw",
+    "surreal",
+    "desire",
+    "labyrinth",
+    "dreamscape",
+    "shifting"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [],
+    "compatibleTags": [
+      "nsfw",
+      "surreal",
+      "desire",
+      "labyrinth",
+      "psychological"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "Describe the Velvet Labyrinth, a shifting dreamscape of desire that feels both welcoming and subtly wrong.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "The world adapts to the player's expressed desires, but always with a subtle wrongness — a flicker, a wrong reflection, a scent that curdles.",
+    "contentBoundary": "Explicit sexual content is allowed within the context of surreal horror, but avoid gratuitous violence or gore."
+  },
+  "generationHints": {
+    "tone": [
+      "sensual",
+      "unsettling",
+      "hypnotic"
+    ],
+    "preferredUse": "To set the ambiance and ground the surreal nature of the setting.",
+    "avoidUse": "Do not reveal the true nature of the labyrinth; keep the horror beneath the surface."
+  },
+  "qualityNotes": [
+    "Slowly introduce environmental uncanniness, like mirrors showing slightly wrong reflections or furniture breathing."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.837Z",
+    "source": "manual_ai_generated_set"
+  }
+}

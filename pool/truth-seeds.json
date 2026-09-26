@@ -1,0 +1,194 @@
+[
+  {
+    "id": "truth-dau-bep-toi",
+    "title": "Kẻ phục vụ kẻ địch",
+    "role": "Bạn là kẻ phục vụ trực tiếp cho thế lực mà bạn phải hạ gục.",
+    "secret": "Bạn không phải anh hùng; bạn là người hầu bị kẹt giữa hai thế lực và cái chết của bạn là phương án dự phòng.",
+    "winSteps": [
+      "Gieo được một niềm tin sai lệch mà kẻ địch coi là sở thích của chính nó",
+      "Dẫn dắt kẻ địch tự thực hiện điều kiện chí mạng lần thứ hai",
+      "Giữ được sự sống tới khi đồng minh ẩn hoàn tất"
+    ],
+    "loseConditions": [
+      "Bị kẻ địch nghi ngờ đủ ba lần",
+      "Tiết lộ thân phận thật của mình cho bất kỳ ai"
+    ],
+    "tags": ["trung-thanh-gia", "hai-mat", "cam-bay"]
+  },
+  {
+    "id": "truth-ke-chi-diem-phan-boi",
+    "title": "Kẻ chỉ điểm phản bội",
+    "role": "Bạn là kẻ chỉ điểm thân cận nhất của thế lực đang truy lùng bạn.",
+    "secret": "Bạn phản bội không phải vì lý tưởng mà vì muốn hồi sinh thứ mình đã tự tay chôn.",
+    "winSteps": [
+      "Đưa cho thế lực ấy ba thông tin đúng để đổi lấy một cơ hội ở gần",
+      "Đánh tráo thứ họ cần bằng thứ bạn cần trước khi bị kiểm tra",
+      "Để thế lực ấy tự tay phá hủy thứ nó đang bảo vệ"
+    ],
+    "loseConditions": [
+      "Bị bắt gặp đứng về phía kẻ thù cũ",
+      "Để thứ mình muốn hồi sinh bị gọi đúng tên"
+    ],
+    "tags": ["phan-boi", "noi-giap", "tra-gia"]
+  },
+  {
+    "id": "truth-ke-mang-thai-quai-vat",
+    "title": "Kẻ mang thứ không được sinh ra",
+    "role": "Bạn là kẻ mang trong mình thứ mà mọi thế lực đều muốn có.",
+    "secret": "Thứ bạn mang không phải sức mạnh mà là một lời hứa đã bị bẻ gãy, và nó sẽ giết bạn khi bị đánh thức.",
+    "winSteps": [
+      "Giữ cho không ai nhận ra thứ trong mình đang thức dậy",
+      "Tìm đúng người có thể mở lời hứa mà không cần phá nó",
+      "Chuyển thứ đó sang vật chứa khác trước khi nó gọi tên bạn"
+    ],
+    "loseConditions": [
+      "Thứ đó gọi đúng tên thật của bạn",
+      "Bị nhốt lại ở nơi nó bị giam lần đầu"
+    ],
+    "tags": ["vat-chua", "bi-an", "sinh-ton"]
+  },
+  {
+    "id": "truth-loi-tien-tri-song",
+    "title": "Lời tiên tri biết đi",
+    "role": "Bạn là lời tiên tri đang sống và mọi phe đều muốn bạn ứng nghiệm.",
+    "secret": "Lời tiên tri không nói về tương lai mà ra lệnh cho tương lai; bạn phải ngăn chính mình trở thành điều được viết.",
+    "winSteps": [
+      "Chứng minh lời tiên tri có thể sai bằng một việc nhỏ ai cũng thấy",
+      "Khiến kẻ tin mình nhất tự tay bẻ gãy câu chữ",
+      "Biến mất khỏi mọi ghi chép trước khi câu cuối ứng nghiệm"
+    ],
+    "loseConditions": [
+      "Có người đọc to câu cuối trước mặt đám đông",
+      "Bị giam trong nơi lời tiên tri được ghi lại"
+    ],
+    "tags": ["tien-tri", "dinh-menh", "phan-khang"]
+  },
+  {
+    "id": "truth-ban-sao-cuoi-cung",
+    "title": "Bản sao cuối cùng còn sót",
+    "role": "Bạn là bản sao cuối cùng của một người đã chết.",
+    "secret": "Người gốc đã chết trước khi kịp bàn giao; bạn phải sống đủ giống để mọi thứ không sụp đổ vì thiếu họ.",
+    "winSteps": [
+      "Hoàn thành việc dang dở của người gốc mà không lộ tay",
+      "Lộ diện đúng buổi lễ định danh và tỏ ra là chính mình",
+      "Buộc người sẽ tố cáo bạn phải công khai phủ nhận chính mình"
+    ],
+    "loseConditions": [
+      "Bị xác nhận là bản sao trước mặt người có quyền",
+      "Để lộ một ký ức không khớp với người gốc"
+    ],
+    "tags": ["ban-sao", "than-phan", "gia-danh"]
+  },
+  {
+    "id": "truth-thu-pham-dang-dieu-tra",
+    "title": "Thủ phạm đang điều tra",
+    "role": "Bạn là thủ phạm của vụ việc mà bạn được giao điều tra.",
+    "secret": "Không có ai khác gây ra chuyện đó; bạn phải tìm một kẻ thế thân trước khi chính mình bị chỉ mặt.",
+    "winSteps": [
+      "Tạo ra một nghi phạm hợp lý bằng chứng cứ tự nhiên",
+      "Dẫn cuộc điều tra tới chỗ nghi phạm ấy tự nhận tội",
+      "Khép hồ sơ trước khi người thật sự hiểu chuyện lên tiếng"
+    ],
+    "loseConditions": [
+      "Có người nhớ ra bạn ở sai chỗ vào đúng lúc",
+      "Vật chứng duy nhất bị đưa ra trước đám đông"
+    ],
+    "tags": ["trinh-tham", "gia-danh", "toi-ac"]
+  },
+  {
+    "id": "truth-ke-duoc-phai-den-huy-diet",
+    "title": "Kẻ được phái đến để bị giết",
+    "role": "Bạn là kẻ được cử đi gây chiến như một vật hiến tế.",
+    "secret": "Phe của bạn cần bạn chết để có cớ khai chiến; phần thưởng duy nhất là được sống nếu bạn phản lại chính họ.",
+    "winSteps": [
+      "Sống sót qua trận đầu mà không để ai nghi ngờ mình cố ý",
+      "Gặp được kẻ đứng sau lệnh mà không bị coi là phản bội",
+      "Khiến cả hai phe biết sự thật mà không phe nào dám thừa nhận"
+    ],
+    "loseConditions": [
+      "Chết trong tay kẻ mà phe bạn cử tới",
+      "Bị coi là phản bội trước khi gặp được kẻ ra lệnh"
+    ],
+    "tags": ["hi-sinh", "phan-boi", "chien-tranh"]
+  },
+  {
+    "id": "truth-ke-thua-ke-cua-chinh-minh",
+    "title": "Kẻ thừa kế của chính mình",
+    "role": "Bạn là kẻ đã từng thắng một lần và giờ phải thua cho đúng.",
+    "secret": "Bạn là vật tế đã được định sẵn cho một thứ chỉ no khi kẻ thua cuộc thừa nhận thất bại thật lòng.",
+    "winSteps": [
+      "Thua một ván trước mặt đúng người đang chờ kết quả",
+      "Để kẻ thắng tin rằng chiến thắng là của riêng hắn",
+      "Hoàn tất nghi thức trước khi thứ kia kịp nhận ra mình bị lừa"
+    ],
+    "loseConditions": [
+      "Thắng quá thuyết phục và lọt vào tầm ngắm của thứ kia",
+      "Nói ra mình cố ý thua trước nhân chứng"
+    ],
+    "tags": ["nghi-le", "thang-thua", "hi-sinh"]
+  },
+  {
+    "id": "truth-nguoi-giu-cong-vao",
+    "title": "Người giữ cửa nhưng cửa không ở đó",
+    "role": "Bạn là người duy nhất biết đường vào nơi không ai được vào.",
+    "secret": "Bạn chỉ là mồi nhử của một kẻ đi săn đã được dạy bản đồ giả; con đường thật nằm trong chính máu bạn.",
+    "winSteps": [
+      "Dẫn kẻ đi săn đi đúng con đường giả cho tới tận cùng",
+      "Để hắn tự tay mở cánh cửa mà bạn không được phép mở",
+      "Đổi máu mình lấy lối ra trước khi cửa khép lại"
+    ],
+    "loseConditions": [
+      "Đưa nhầm người tới đúng con đường thật",
+      "Mất máu tới mức không thể tự đi tiếp"
+    ],
+    "tags": ["dan-duong", "cam-bay", "sinh-ton"]
+  },
+  {
+    "id": "truth-ke-bi-ket-an",
+    "title": "Kẻ bị kết án oan",
+    "role": "Bạn là kẻ đang mang bản án mà người khác đáng phải chịu.",
+    "secret": "Người đã buộc tội bạn làm vậy để cứu bạn; bản án thật nhắm vào một kẻ khác mà cả hai đều không dám gọi tên.",
+    "winSteps": [
+      "Chứng minh công khai rằng kẻ buộc tội biết mình đang nói sai",
+      "Buộc kẻ đứng sau phải ra tay trước mặt người khác",
+      "Đưa bằng chứng ra đúng lúc không thể bị thu hồi"
+    ],
+    "loseConditions": [
+      "Bị xử tử như một tên phản bội",
+      "Người đã cứu bạn chết vì tin vào lời buộc tội"
+    ],
+    "tags": ["bi-oan", "phan-boi", "dan-xuong"]
+  },
+  {
+    "id": "truth-mon-no-chua-tra",
+    "title": "Món nợ chưa trả xong",
+    "role": "Bạn là món nợ chưa trả xong của một thế lực không thể từ chối.",
+    "secret": "Bạn không phải con nợ mà là kỳ trả góp của một khế ước đã ký; chỉ cái chết của bạn mới đóng được khế ước đó.",
+    "winSteps": [
+      "Tìm ra ai đang giữ khế ước và chính xác điều gì sẽ đóng nó",
+      "Dụ người thu nợ ký thay vào ô của mình",
+      "Sống qua kỳ đáo hạn mà không ký thêm bất cứ điều gì"
+    ],
+    "loseConditions": [
+      "Gặp trực tiếp người thu nợ mà không biết giá trị của mình",
+      "Ký chấm dứt khế ước bằng vũ lực"
+    ],
+    "tags": ["mon-no", "tra-gia", "khung-hoang"]
+  },
+  {
+    "id": "truth-nguoi-mang-loi-cam",
+    "title": "Người mang lời cấm chưa giao",
+    "role": "Bạn là kẻ bị cấm giao món đồ cho bất kỳ ai.",
+    "secret": "Món đồ bạn đang mang có thể kết thúc cuộc chiến; phe bạn muốn giữ nó, còn bạn được lệnh phải đưa nó đi.",
+    "winSteps": [
+      "Thuyết phục phe mình rằng món đồ đã bị thất lạc",
+      "Đưa món đồ tận tay đúng người vào đúng thời khắc",
+      "Để cuộc chiến kết thúc trước khi mình bị tìm thấy"
+    ],
+    "loseConditions": [
+      "Phe mình quên mất sự tồn tại của bạn",
+      "Giao món đồ cho người sẽ dùng nó chống lại bạn"
+    ],
+    "tags": ["bi-mat", "giao-pho", "trung-thanh"]
+  }
+]

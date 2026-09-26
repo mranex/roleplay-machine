@@ -1,0 +1,59 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "goal_escape_labyrinth",
+  "title": "Escape the Velvet Labyrinth",
+  "type": [
+    "goal"
+  ],
+  "description": "Find the true exit. It lies not in winding corridors, but in the room that houses your deepest, most painful desire — the one you’ve been avoiding. You must confront it fully and then choose to walk away, rejecting the illusion.",
+  "chaos": 2,
+  "tags": [
+    "nsfw",
+    "goal",
+    "escape",
+    "confrontation",
+    "psychological"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [],
+    "compatibleTags": [
+      "nsfw",
+      "surreal",
+      "desire",
+      "labyrinth",
+      "psychological"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The exit lies at the heart of the player's most painful desire, requiring them to confront and reject it.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "Clues about the exit appear only when the player resists pleasure or questions the world. The final door becomes visible in moments of true clarity.",
+    "contentBoundary": "The core desire should be tied to the player's defined yearning, not an arbitrary puzzle."
+  },
+  "generationHints": {
+    "tone": [
+      "determined",
+      "bittersweet"
+    ],
+    "preferredUse": "To give the scene a concrete win condition beyond mere survival.",
+    "avoidUse": "Do not make the exit easy to find; it requires sacrifice."
+  },
+  "qualityNotes": [
+    "The victory should feel cathartic, a release from both pleasure and pain."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.840Z",
+    "source": "manual_ai_generated_set"
+  }
+}

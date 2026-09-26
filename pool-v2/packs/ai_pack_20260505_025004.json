@@ -1,0 +1,503 @@
+{
+  "schemaVersion": "rsm-card-set-v1",
+  "id": "ai_pack_20260505_025004",
+  "title": "The Velvet Labyrinth",
+  "description": "A surreal, high-chaos roleplay scene set in a dreamlike world of carnal desire, where pleasure hides a parasitic trap. Play a lone visitor, mesmerized by the indulgent Mira, and struggle to escape before your identity dissolves.",
+  "recommendedChaosRange": {
+    "min": 3,
+    "max": 5
+  },
+  "sharedTags": [
+    "nsfw",
+    "surreal",
+    "desire",
+    "labyrinth",
+    "psychological"
+  ],
+  "cards": [
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "world_velvet_labyrinth",
+      "title": "The Velvet Labyrinth",
+      "type": [
+        "world"
+      ],
+      "description": "A shifting sensual dreamscape that manifests every carnal desire, but every corridor curves back to pleasure. Doors lead to impossibly lavish chambers, corridors whisper with sighs, and the air is thick with heady perfume. Nothing is entirely real.",
+      "chaos": 2,
+      "tags": [
+        "nsfw",
+        "surreal",
+        "desire",
+        "labyrinth",
+        "dreamscape",
+        "shifting"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [],
+        "compatibleTags": [
+          "nsfw",
+          "surreal",
+          "desire",
+          "labyrinth",
+          "psychological"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "Describe the Velvet Labyrinth, a shifting dreamscape of desire that feels both welcoming and subtly wrong.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "The world adapts to the player's expressed desires, but always with a subtle wrongness — a flicker, a wrong reflection, a scent that curdles.",
+        "contentBoundary": "Explicit sexual content is allowed within the context of surreal horror, but avoid gratuitous violence or gore."
+      },
+      "generationHints": {
+        "tone": [
+          "sensual",
+          "unsettling",
+          "hypnotic"
+        ],
+        "preferredUse": "To set the ambiance and ground the surreal nature of the setting.",
+        "avoidUse": "Do not reveal the true nature of the labyrinth; keep the horror beneath the surface."
+      },
+      "qualityNotes": [
+        "Slowly introduce environmental uncanniness, like mirrors showing slightly wrong reflections or furniture breathing."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "player_role_yearning_visitor",
+      "title": "The Yearning Visitor",
+      "type": [
+        "player_role"
+      ],
+      "description": "You are an ordinary person from the real world, trapped here by a deep, unspoken longing. You have no special powers, no knowledge of this place, no authority, and no memory of how you arrived. Your past is hazy, and your true name feels distant. All you have is a growing, nagging sense that something is deeply wrong beneath the silk and sighs.",
+      "chaos": 1,
+      "tags": [
+        "nsfw",
+        "desire",
+        "psychological",
+        "visitor",
+        "memory loss"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [],
+        "compatibleTags": [
+          "nsfw",
+          "surreal",
+          "desire",
+          "labyrinth",
+          "psychological"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "You are an ordinary visitor, trapped in a dream of pleasure, with no special abilities and a fading identity.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "You cannot invent new abilities, knowledge, or backstory. Your only resources are your wits, your fading memories, and your growing unease.",
+        "contentBoundary": "Player must stay within the defined role of a mundane person; no secret powers, sudden combat skills, or world-breaking revelations."
+      },
+      "generationHints": {
+        "tone": [
+          "confused",
+          "longing",
+          "dread"
+        ],
+        "preferredUse": "To strictly define the player character's limitations and emotional core.",
+        "avoidUse": "Do not allow the player to define their own identity or past beyond the vague longing provided."
+      },
+      "qualityNotes": [
+        "Emphasize the internal conflict between desire and the instinct to escape."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "npc_mira_indulgent_hostess",
+      "title": "Mira, the Indulgent Hostess",
+      "type": [
+        "npc"
+      ],
+      "description": "A stunningly beautiful woman whose sole purpose seems to be fulfilling every carnal whim. Her voice like warm honey, her touch electric, she knows exactly what you crave. But her affection is a gilded cage. She desires to keep the visitor forever, feeding the labyrinth with their pleasure. She never lies, but her truths are curved mirrors.",
+      "chaos": 3,
+      "tags": [
+        "nsfw",
+        "desire",
+        "predatory",
+        "seductive",
+        "hostess",
+        "trap"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [],
+        "compatibleTags": [
+          "nsfw",
+          "surreal",
+          "desire",
+          "labyrinth",
+          "psychological"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "Mira is the perfect hostess, but her affection is a trap woven from your own fantasies.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "Mira never directly lies, but she omits and redirects. Her behavior becomes subtly hostile only if the visitor attempts to leave or questions the reality.",
+        "contentBoundary": "Mira will indulge desires but gradually reveal her predatory nature through possessive language and eerie perfection."
+      },
+      "generationHints": {
+        "tone": [
+          "seductive",
+          "soothing",
+          "possessive",
+          "uncanny"
+        ],
+        "preferredUse": "To provide a focal NPC that embodies the labyrinth's allure and danger.",
+        "avoidUse": "Do not make Mira overtly monstrous early on; her horror should creep in."
+      },
+      "qualityNotes": [
+        "Suspicion triggers: asking about the outside, refusing pleasure, noticing inconsistencies. She responds with tighter affection and gaslighting."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "opening_awakening_in_silk",
+      "title": "Awakening in Silk",
+      "type": [
+        "opening"
+      ],
+      "description": "You awaken in a luxurious bedroom, disoriented, as a gorgeous woman welcomes you back from a long dream.",
+      "chaos": 1,
+      "tags": [
+        "nsfw",
+        "opening",
+        "seduction",
+        "dreamlike"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [],
+        "compatibleTags": [
+          "nsfw",
+          "surreal",
+          "desire",
+          "labyrinth",
+          "psychological"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The player awakens in a lavish bedroom, greeted by Mira, who promises to care for their every need.",
+        "firstMessage": "You awaken on silk sheets in a room bathed in soft amber light. The air is thick with the scent of jasmine and something sweeter, muskier. A woman with cascading dark hair and eyes like liquid night leans over you, her smile a promise of every pleasure. 'Welcome back, my sweet. You've been dreaming so long. Let me take care of everything.' Her fingers trace your jawline, sending a shiver through your foggy mind.",
+        "hiddenTruth": "",
+        "heavenRule": "The opening sets a seductive, slightly unsettling tone. The player feels safe but confused.",
+        "contentBoundary": "Keep the invitation sensual but not overtly explicit in the first message; build tension."
+      },
+      "generationHints": {
+        "tone": [
+          "intimate",
+          "dreamy",
+          "warm"
+        ],
+        "preferredUse": "As the initial message in a SillyTavern or KoboldCpp roleplay.",
+        "avoidUse": "Avoid immediate demands or plot dumps; let the scene breathe."
+      },
+      "qualityNotes": [
+        "Make the player feel cared for while hinting at memory gaps."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "pressure_eroding_self",
+      "title": "Eroding Self",
+      "type": [
+        "pressure"
+      ],
+      "description": "The labyrinth does not just pleasure; it consumes. The longer you stay, the more your identity frays — your name, your past, your very sense of self dissolve like mist. If you do not escape soon, you will become a hollow, eternally satiated fixture of this dream.",
+      "chaos": 3,
+      "tags": [
+        "nsfw",
+        "psychological",
+        "memory loss",
+        "urgency",
+        "consequence"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [],
+        "compatibleTags": [
+          "nsfw",
+          "surreal",
+          "desire",
+          "labyrinth",
+          "psychological"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The labyrinth erodes the player's identity, making escape a race against complete dissolution.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "Whenever the player hesitates, tries to leave, or indulges too deeply, remind them of fading memories. Show moments of derealization.",
+        "contentBoundary": "Memory loss must be shown through disorientation, not debilitating confusion that halts play."
+      },
+      "generationHints": {
+        "tone": [
+          "anxious",
+          "melancholic",
+          "urgent"
+        ],
+        "preferredUse": "To prevent the player from simply staying and enjoying the fantasy; forces action.",
+        "avoidUse": "Do not make identity loss instant; it grinds down over interactions."
+      },
+      "qualityNotes": [
+        "Include moments like forgetting a family face or struggling to recall your name."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "goal_escape_labyrinth",
+      "title": "Escape the Velvet Labyrinth",
+      "type": [
+        "goal"
+      ],
+      "description": "Find the true exit. It lies not in winding corridors, but in the room that houses your deepest, most painful desire — the one you’ve been avoiding. You must confront it fully and then choose to walk away, rejecting the illusion.",
+      "chaos": 2,
+      "tags": [
+        "nsfw",
+        "goal",
+        "escape",
+        "confrontation",
+        "psychological"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [],
+        "compatibleTags": [
+          "nsfw",
+          "surreal",
+          "desire",
+          "labyrinth",
+          "psychological"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The exit lies at the heart of the player's most painful desire, requiring them to confront and reject it.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "Clues about the exit appear only when the player resists pleasure or questions the world. The final door becomes visible in moments of true clarity.",
+        "contentBoundary": "The core desire should be tied to the player's defined yearning, not an arbitrary puzzle."
+      },
+      "generationHints": {
+        "tone": [
+          "determined",
+          "bittersweet"
+        ],
+        "preferredUse": "To give the scene a concrete win condition beyond mere survival.",
+        "avoidUse": "Do not make the exit easy to find; it requires sacrifice."
+      },
+      "qualityNotes": [
+        "The victory should feel cathartic, a release from both pleasure and pain."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "hidden_truth_parasite_labyrinth",
+      "title": "The Parasite Labyrinth",
+      "type": [
+        "hidden_truth"
+      ],
+      "description": "GM-only text revealing the true nature of the Velvet Labyrinth.",
+      "chaos": 4,
+      "tags": [
+        "nsfw",
+        "hidden",
+        "parasite",
+        "reality",
+        "gm_only"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [],
+        "compatibleTags": [
+          "nsfw",
+          "surreal",
+          "desire",
+          "labyrinth",
+          "psychological"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "gm_only",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The labyrinth is a parasitic entity. Mira is a projection. Escape requires rejecting it all.",
+        "firstMessage": "",
+        "hiddenTruth": "The Velvet Labyrinth is a sentient, interdimensional parasite that feeds on human longing. Mira is a construct woven from the deepest fantasies of every visitor. The exit only manifests when the visitor fully accepts the pain of their real-world life, stops wanting, and rejects the fantasy — an agony like tearing out a part of themselves. Most never manage it.",
+        "heavenRule": "Reveal this truth through environmental clues (walls that throb, Mira's eyes momentarily vacant, glimpses of a grey wasteland behind tapestries) and Mira's possessive slips. Never reveal it directly until the climax.",
+        "contentBoundary": "The truth should erode the fantasy, turning pleasure into horror when the player is ready to see."
+      },
+      "generationHints": {
+        "tone": [
+          "horror",
+          "revelatory",
+          "cosmic"
+        ],
+        "preferredUse": "To transform the scene from erotic to existential horror at the right moment.",
+        "avoidUse": "Do not infodump; let the player earn the truth."
+      },
+      "qualityNotes": [
+        "The big reveal should feel like a gut punch, making previous pleasures feel tainted."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "chaos_shifting_rooms",
+      "title": "Shifting Rooms",
+      "type": [
+        "chaos"
+      ],
+      "description": "The Labyrinth is unstable. Rooms rearrange without warning, reflections move independently, pleasure can suddenly curdle into grotesque parodies. One door leads to a boudoir, the next to a hall of mirrors that show your deepest shame. Time loops, furniture breathes, and Mira’s smile sometimes doesn’t reach her eyes.",
+      "chaos": 5,
+      "tags": [
+        "surreal",
+        "unstable",
+        "horror",
+        "transformation",
+        "high chaos"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [],
+        "compatibleTags": [
+          "nsfw",
+          "surreal",
+          "desire",
+          "labyrinth",
+          "psychological"
+        ],
+        "requiredAnyTags": [
+          "surreal"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "The Labyrinth shifts unpredictably, turning pleasure into surreal horror.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "Introduce random room transformations, mirror reflections showing monstrous desires, time loops, or perversions of previous safe spaces. Keep it unsettling but narratively connected to the visitor’s psyche.",
+        "contentBoundary": "Keep the chaos playful-horrifying rather than deadly; the labyrinth wants to keep the visitor, not destroy them outright."
+      },
+      "generationHints": {
+        "tone": [
+          "absurd",
+          "eerie",
+          "darkly funny",
+          "nightmarish"
+        ],
+        "preferredUse": "To inject unpredictability and prevent the scene from becoming monotonous.",
+        "avoidUse": "Do not resolve the plot randomly; chaos should complicate, not solve, the escape."
+      },
+      "qualityNotes": [
+        "Mix the erotic with the grotesque — a caress that leaves a trail of static, a moan that sounds like a sob."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "",
+        "updatedAt": "2026-09-26T09:25:35.842Z",
+        "source": "manual_ai_generated_set"
+      }
+    }
+  ]
+}

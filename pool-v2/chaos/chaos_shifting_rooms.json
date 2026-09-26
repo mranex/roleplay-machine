@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "chaos_shifting_rooms",
+  "title": "Shifting Rooms",
+  "type": [
+    "chaos"
+  ],
+  "description": "The Labyrinth is unstable. Rooms rearrange without warning, reflections move independently, pleasure can suddenly curdle into grotesque parodies. One door leads to a boudoir, the next to a hall of mirrors that show your deepest shame. Time loops, furniture breathes, and Mira’s smile sometimes doesn’t reach her eyes.",
+  "chaos": 5,
+  "tags": [
+    "surreal",
+    "unstable",
+    "horror",
+    "transformation",
+    "high chaos"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [],
+    "compatibleTags": [
+      "nsfw",
+      "surreal",
+      "desire",
+      "labyrinth",
+      "psychological"
+    ],
+    "requiredAnyTags": [
+      "surreal"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The Labyrinth shifts unpredictably, turning pleasure into surreal horror.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "Introduce random room transformations, mirror reflections showing monstrous desires, time loops, or perversions of previous safe spaces. Keep it unsettling but narratively connected to the visitor’s psyche.",
+    "contentBoundary": "Keep the chaos playful-horrifying rather than deadly; the labyrinth wants to keep the visitor, not destroy them outright."
+  },
+  "generationHints": {
+    "tone": [
+      "absurd",
+      "eerie",
+      "darkly funny",
+      "nightmarish"
+    ],
+    "preferredUse": "To inject unpredictability and prevent the scene from becoming monotonous.",
+    "avoidUse": "Do not resolve the plot randomly; chaos should complicate, not solve, the escape."
+  },
+  "qualityNotes": [
+    "Mix the erotic with the grotesque — a caress that leaves a trail of static, a moan that sounds like a sob."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.841Z",
+    "source": "manual_ai_generated_set"
+  }
+}

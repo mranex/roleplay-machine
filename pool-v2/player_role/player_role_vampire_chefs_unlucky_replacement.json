@@ -1,0 +1,84 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "player_role_vampire_chefs_unlucky_replacement",
+  "title": "The Vampire Chef's Unlucky Replacement",
+  "type": [
+    "player_role"
+  ],
+  "description": "The player is a terrified replacement chef forced to cook for an ancient vampire. They can cook, improvise, observe, and lie carefully, but they cannot fight or use supernatural powers.",
+  "chaos": 2,
+  "tags": [
+    "chef",
+    "food",
+    "servant",
+    "deception",
+    "survival",
+    "vampire",
+    "fantasy"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "fantasy",
+      "food",
+      "survival"
+    ],
+    "compatibleTags": [
+      "vampire",
+      "castle",
+      "kitchen",
+      "deception",
+      "noble",
+      "dark_comedy",
+      "pressure"
+    ],
+    "requiredAnyTags": [
+      "food",
+      "kitchen",
+      "vampire",
+      "noble"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "superhero",
+      "space_marine",
+      "wizard_duel",
+      "gunslinger",
+      "chosen_one"
+    ],
+    "compatibleCardIds": [
+      "npc_count_valtherion_the_fashionable_vampire",
+      "goal_three_garlic_courses"
+    ],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The player character is a replacement chef dragged into service moments before the ancient vampire lord demands his first meal in five hundred years. The player knows how to cook, season food, improvise with ingredients, read a dining room, and speak carefully under pressure. The player is not a warrior, mage, noble, assassin, priest, vampire hunter, or chosen hero.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "Kami-sama declares: You are the chef. Not the hidden prince. Not the secret paladin. Not the vampire hunter with a silver revolver. A chef. Cook accordingly.",
+    "contentBoundary": "The player may not invent weapons, magic, noble authority, combat training, secret vampire lore, hidden allies, or past heroic achievements. The player can only use cooking, words, observation, timing, and kitchen tools that reasonably exist in the scene."
+  },
+  "generationHints": {
+    "tone": [
+      "survival comedy",
+      "role restriction",
+      "improvised deception"
+    ],
+    "preferredUse": "Use when the scene should force the player into a constrained, non-combat role.",
+    "avoidUse": "Avoid with scenes that require the player to win through combat, magic, or direct heroic violence."
+  },
+  "qualityNotes": [
+    "Defines the player role clearly.",
+    "Strongly supports Kami-sama enforcement.",
+    "Prevents power fantasy derailment."
+  ],
+  "metadata": {
+    "author": "user",
+    "createdAt": "2026-05-04T00:00:00.000Z",
+    "updatedAt": "2026-09-26T09:25:35.838Z",
+    "source": "default_test_deck"
+  }
+}

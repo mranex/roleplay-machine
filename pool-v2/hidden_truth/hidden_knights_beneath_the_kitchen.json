@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "hidden_knights_beneath_the_kitchen",
+  "title": "Knights Beneath the Kitchen",
+  "type": [
+    "hidden_truth"
+  ],
+  "description": "A wounded group of holy knights is hiding beneath the kitchen floor, waiting for the vampire to be weakened by garlic.",
+  "chaos": 2,
+  "tags": [
+    "hidden_truth",
+    "holy_knight",
+    "vampire",
+    "kitchen",
+    "rescue",
+    "secret_allies",
+    "fantasy"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "fantasy",
+      "vampire"
+    ],
+    "compatibleTags": [
+      "castle",
+      "kitchen",
+      "garlic",
+      "deception",
+      "goal",
+      "survival",
+      "monster"
+    ],
+    "requiredAnyTags": [
+      "vampire",
+      "monster",
+      "undead"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "modern_office",
+      "void",
+      "spaceship",
+      "no_combat",
+      "cozy"
+    ],
+    "compatibleCardIds": [
+      "goal_three_garlic_courses",
+      "pressure_suspicion_means_death"
+    ],
+    "incompatibleCardIds": []
+  },
+  "visibility": "gm_only",
+  "weight": 10,
+  "fragments": {
+    "prompt": "There is a hidden group of wounded holy knights beneath the kitchen floor. They cannot fight Valtherion while he is at full strength. They are waiting for the player to weaken him indirectly.",
+    "firstMessage": "",
+    "hiddenTruth": "The servants know something is hidden beneath the kitchen, but they are too afraid to say it. The knights can only act after Valtherion consumes enough garlic. The player should not know this at the start unless the scene reveals it through clues.",
+    "heavenRule": "Kami-sama declares: Help exists, but not as a button. The floor has ears, wounds, and a very poor sense of timing.",
+    "contentBoundary": "Do not reveal the knights immediately. Foreshadow them through faint sounds, shifting floorboards, whispered servant panic, or odd restrictions around the kitchen floor."
+  },
+  "generationHints": {
+    "tone": [
+      "hidden ally",
+      "secret rescue",
+      "delayed payoff"
+    ],
+    "preferredUse": "Use when the scene needs a hidden win mechanism behind a public goal.",
+    "avoidUse": "Avoid if the player should have full knowledge of all allies from the beginning."
+  },
+  "qualityNotes": [
+    "Good GM-only twist.",
+    "Explains why garlic matters.",
+    "Creates payoff after three courses."
+  ],
+  "metadata": {
+    "author": "user",
+    "createdAt": "2026-05-04T00:00:00.000Z",
+    "updatedAt": "2026-09-26T09:25:35.840Z",
+    "source": "default_test_deck"
+  }
+}

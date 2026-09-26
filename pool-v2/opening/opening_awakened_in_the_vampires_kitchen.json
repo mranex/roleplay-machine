@@ -1,0 +1,83 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "opening_awakened_in_the_vampires_kitchen",
+  "title": "Awakened in the Vampire's Kitchen",
+  "type": [
+    "opening"
+  ],
+  "description": "The player wakes up in the body of the castle's replacement chef moments before the vampire lord demands dinner.",
+  "chaos": 3,
+  "tags": [
+    "isekai",
+    "kitchen",
+    "castle",
+    "vampire",
+    "food",
+    "panic",
+    "survival"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "fantasy",
+      "survival"
+    ],
+    "compatibleTags": [
+      "chef",
+      "vampire",
+      "castle",
+      "food",
+      "pressure",
+      "deception",
+      "dark_comedy"
+    ],
+    "requiredAnyTags": [
+      "chef",
+      "kitchen",
+      "food",
+      "castle"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "void",
+      "battlefield",
+      "spaceship",
+      "school_festival",
+      "modern_office"
+    ],
+    "compatibleCardIds": [
+      "player_role_vampire_chefs_unlucky_replacement",
+      "npc_count_valtherion_the_fashionable_vampire"
+    ],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The scene opens with the player suddenly waking inside a smoky medieval kitchen, wearing a stained chef's apron and holding a knife meant for chopping vegetables, not fighting monsters. Servants whisper that the previous chef fled, fainted, or was eaten. A silver bell rings from the dining hall. Count Valtherion demands his first meal after five hundred years.",
+    "firstMessage": "You wake to smoke, shouting, and the smell of onions burning in butter. A heavy apron hangs from your neck. Your hand grips a kitchen knife, but the blade is dull and speckled with carrot peel.\n\nA trembling servant shoves a tray into your arms and whispers, \"Chef, please. The Count is awake. He says if dinner is not impressive, he will drink whoever disappoints him first.\"\n\nFrom beyond the kitchen doors, a bell rings once. Then a voice, smooth as velvet over a coffin lid, calls out:\n\n\"My chef. Come here. I wish to taste the present age.\"",
+    "hiddenTruth": "",
+    "heavenRule": "Kami-sama declares: The scene begins in the kitchen. The player has no time to rewrite their identity. The bell has already rung.",
+    "contentBoundary": "The opening should immediately pressure the player to act as the chef. Do not allow a long preparation montage or unrelated exploration before the first interaction with Valtherion."
+  },
+  "generationHints": {
+    "tone": [
+      "panic comedy",
+      "immediate danger",
+      "kitchen survival"
+    ],
+    "preferredUse": "Use when the story should start fast without long exposition.",
+    "avoidUse": "Avoid with slow-burn exploration scenes."
+  },
+  "qualityNotes": [
+    "Strong first message candidate.",
+    "Immediately establishes role, pressure, and NPC.",
+    "Good for SillyTavern greeting."
+  ],
+  "metadata": {
+    "author": "user",
+    "createdAt": "2026-05-04T00:00:00.000Z",
+    "updatedAt": "2026-09-26T09:25:35.839Z",
+    "source": "default_test_deck"
+  }
+}

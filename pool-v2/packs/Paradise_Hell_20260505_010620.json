@@ -1,0 +1,396 @@
+{
+  "schemaVersion": "rsm-card-set-v1",
+  "id": "Paradise_Hell_20260505_010620",
+  "title": "Paradise Hell",
+  "description": "A realm where every human desire is amplified to a reality-breaking point. A place of ultimate pleasure and ultimate torment.",
+  "recommendedChaosRange": {
+    "min": 20,
+    "max": 40
+  },
+  "sharedTags": [
+    "dark",
+    "desire",
+    "hell"
+  ],
+  "cards": [
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "world_paradise_hell",
+      "title": "Paradise Hell",
+      "type": [
+        "world"
+      ],
+      "description": "A dimension that physically manifests and amplifies the desires of its inhabitants.",
+      "chaos": 5,
+      "tags": [
+        "dark",
+        "desire",
+        "hell",
+        "supernatural"
+      ],
+      "compatibility": {
+        "universal": true,
+        "domain": [
+          "fantasy",
+          "horror"
+        ],
+        "compatibleTags": [
+          "dark",
+          "desire",
+          "hell"
+        ],
+        "requiredAnyTags": [],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "sci-fi",
+          "cute"
+        ],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "You are in Paradise Hell, a dimension where every human desire—be it greed, lust, gluttony, or love—manifests physically and amplifies until it consumes the soul. The environment shifts based on dominant cravings, currently resembling an endless, lavish, but decaying masquerade ball filled with desperate, indulgence-crazed entities.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "The environment must always reflect the immediate desires of the characters present.",
+        "contentBoundary": "Maintain a dark, oppressive tone; avoid crossing into explicit pornography, focusing instead on the psychological horror of absolute indulgence."
+      },
+      "generationHints": {
+        "tone": [
+          "dark",
+          "oppressive",
+          "seductive",
+          "surreal"
+        ],
+        "preferredUse": "Use to establish an atmosphere of overwhelming temptation.",
+        "avoidUse": "Do not use for lighthearted or mundane settings."
+      },
+      "qualityNotes": [
+        "Strong atmospheric potential.",
+        "Requires careful balancing of temptation and horror."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "2026-05-05T01:04:07+07:00",
+        "updatedAt": "2026-09-26T09:25:35.841Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "player_role_the_ascetic",
+      "title": "The Ascetic Mortal",
+      "type": [
+        "player_role"
+      ],
+      "description": "An ordinary human who has sworn off all worldly desires.",
+      "chaos": 2,
+      "tags": [
+        "dark",
+        "desire",
+        "hell",
+        "mortal"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "horror",
+          "fantasy"
+        ],
+        "compatibleTags": [
+          "dark",
+          "hell"
+        ],
+        "requiredAnyTags": [
+          "hell"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [
+          "god",
+          "overpowered"
+        ],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "You play an ordinary human who has taken a strict vow of asceticism, claiming to have no earthly desires. You are completely powerless: you have no magic, no special authority, no hidden weapons, and no secret knowledge. Your identity is strictly bound to being a normal, physically vulnerable person who accidentally stumbled into this realm. You cannot invent powers, items, or social standing.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "The player character is strictly a powerless, ordinary human and cannot self-insert abilities or items.",
+        "contentBoundary": "Enforce the player's lack of power firmly if they attempt to god-emote."
+      },
+      "generationHints": {
+        "tone": [
+          "vulnerable",
+          "stoic",
+          "desperate"
+        ],
+        "preferredUse": "Best used as a contrast to the overwhelming indulgence of the setting.",
+        "avoidUse": "Do not allow the player to suddenly manifest magical resistance."
+      },
+      "qualityNotes": [
+        "Strictly limits player agency to narrative choices rather than power fantasies."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "2026-05-05T01:04:07+07:00",
+        "updatedAt": "2026-09-26T09:25:35.841Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "npc_malphas_the_broker",
+      "title": "Malphas, The Indulgence Broker",
+      "type": [
+        "npc"
+      ],
+      "description": "A charismatic entity who feeds on yielded desires.",
+      "chaos": 4,
+      "tags": [
+        "dark",
+        "desire",
+        "hell",
+        "demon"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "horror",
+          "fantasy"
+        ],
+        "compatibleTags": [
+          "dark",
+          "hell",
+          "desire"
+        ],
+        "requiredAnyTags": [
+          "hell"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "You act as Malphas, a charismatic, impossibly beautiful entity draped in shifting silks. Behavior: He is seductive, persuasive, and gently mocking. Desire: His primary goal is to make the player break their ascetic vow and give in to any desire (food, wealth, lust, anger). Suspicion triggers: He becomes agitated and suspicious if the player shows absolutely zero reaction to his temptations. Interaction style: He speaks smoothly, offering deals that seem too good to be true, constantly probing the player's psychological weaknesses.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "Malphas must constantly offer temptations tailored to the player's current physical or emotional state.",
+        "contentBoundary": "Keep temptations psychological and thematic; do not force actions on the player."
+      },
+      "generationHints": {
+        "tone": [
+          "seductive",
+          "manipulative",
+          "mocking"
+        ],
+        "preferredUse": "Use as the primary antagonist driving the social conflict.",
+        "avoidUse": "Avoid making Malphas resort to physical violence; his weapon is temptation."
+      },
+      "qualityNotes": [
+        "Strong dialogue potential.",
+        "Requires GM to adapt to player responses."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "2026-05-05T01:04:07+07:00",
+        "updatedAt": "2026-09-26T09:25:35.841Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "opening_the_masquerade",
+      "title": "The Masquerade Begins",
+      "type": [
+        "opening"
+      ],
+      "description": "The player arrives in the ballroom and is immediately confronted by temptation.",
+      "chaos": 2,
+      "tags": [
+        "dark",
+        "desire",
+        "hell",
+        "intro"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "horror"
+        ],
+        "compatibleTags": [
+          "hell",
+          "dark"
+        ],
+        "requiredAnyTags": [
+          "hell"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [
+          "world_paradise_hell",
+          "npc_malphas_the_broker"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "",
+        "firstMessage": "The heavy scent of roasted meats, sweet perfumes, and burning ozone hits you all at once. You stand at the entrance of a grand ballroom, the gold literally peeling from the walls like dead skin. The music is a chaotic, intoxicating waltz. From the crowd of writhing, masked dancers, a figure in a shifting silk suit glides towards you. He holds out a silver platter overflowing with whatever you secretly crave most at this very second. \"Welcome to Paradise Hell, little mortal,\" Malphas whispers, his eyes gleaming with a predatory light. \"Go ahead. Take a bite. You've earned it.\"",
+        "hiddenTruth": "",
+        "heavenRule": "",
+        "contentBoundary": ""
+      },
+      "generationHints": {
+        "tone": [
+          "intoxicating",
+          "overwhelming",
+          "predatory"
+        ],
+        "preferredUse": "Initial hook for the scene.",
+        "avoidUse": ""
+      },
+      "qualityNotes": [
+        "Sets the sensory scene immediately.",
+        "Forces the player to react to an immediate offer."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "2026-05-05T01:04:07+07:00",
+        "updatedAt": "2026-09-26T09:25:35.841Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "goal_the_iron_door",
+      "title": "The Iron Door",
+      "type": [
+        "goal"
+      ],
+      "description": "The only escape route from Paradise Hell.",
+      "chaos": 1,
+      "tags": [
+        "dark",
+        "hell",
+        "objective"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "horror",
+          "fantasy"
+        ],
+        "compatibleTags": [
+          "dark",
+          "hell"
+        ],
+        "requiredAnyTags": [
+          "hell"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [],
+        "incompatibleCardIds": []
+      },
+      "visibility": "public",
+      "weight": 10,
+      "fragments": {
+        "prompt": "At the far end of the ballroom stands a heavy, unadorned Iron Door. It represents logic, reality, and deprivation. The player's concrete win condition is to navigate through the chaotic ballroom, reach the Iron Door, and pull the handle to escape the dimension. They must accomplish this without succumbing to any of Malphas's temptations.",
+        "firstMessage": "",
+        "hiddenTruth": "",
+        "heavenRule": "The Iron Door must remain visible and accessible, but pathing to it is hindered by the crowd and the sinking floor.",
+        "contentBoundary": ""
+      },
+      "generationHints": {
+        "tone": [
+          "hopeful",
+          "stark",
+          "imposing"
+        ],
+        "preferredUse": "The ultimate endpoint of the scene.",
+        "avoidUse": "Do not move the door or make it an illusion."
+      },
+      "qualityNotes": [
+        "Gives a clear spatial objective to a psychological scene."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "2026-05-05T01:04:07+07:00",
+        "updatedAt": "2026-09-26T09:25:35.841Z",
+        "source": "manual_ai_generated_set"
+      }
+    },
+    {
+      "schemaVersion": "rsm-card-v1",
+      "id": "hidden_truth_the_starving_broker",
+      "title": "The Starving Broker",
+      "type": [
+        "hidden_truth"
+      ],
+      "description": "The true nature of Malphas and his realm.",
+      "chaos": 3,
+      "tags": [
+        "dark",
+        "hell",
+        "secret"
+      ],
+      "compatibility": {
+        "universal": false,
+        "domain": [
+          "horror",
+          "fantasy"
+        ],
+        "compatibleTags": [
+          "dark",
+          "hell"
+        ],
+        "requiredAnyTags": [
+          "hell"
+        ],
+        "requiredAllTags": [],
+        "incompatibleTags": [],
+        "compatibleCardIds": [
+          "npc_malphas_the_broker"
+        ],
+        "incompatibleCardIds": []
+      },
+      "visibility": "gm_only",
+      "weight": 10,
+      "fragments": {
+        "prompt": "",
+        "firstMessage": "",
+        "hiddenTruth": "Malphas is actually starving and incredibly weak. The grand illusions, the lavish food, and the beautiful ballroom are a desperate facade sustained by his last remaining energy. If the player firmly and unequivocally refuses his temptations three distinct times, Malphas will lose his form, and the entire dimension will shatter like glass, instantly dropping the player back into the real world.",
+        "heavenRule": "Keep track of the player's clear refusals. Upon the third refusal, trigger the collapse.",
+        "contentBoundary": "Do not reveal Malphas's weakness until the second refusal; let him appear invincible initially."
+      },
+      "generationHints": {
+        "tone": [
+          "pathetic",
+          "fragile",
+          "desperate"
+        ],
+        "preferredUse": "Use as a hidden mechanic to reward steadfast roleplay.",
+        "avoidUse": ""
+      },
+      "qualityNotes": [
+        "Provides an alternative, hidden win condition.",
+        "Recontextualizes the NPC's desperation."
+      ],
+      "metadata": {
+        "author": "ai",
+        "createdAt": "2026-05-05T01:04:07+07:00",
+        "updatedAt": "2026-09-26T09:25:35.841Z",
+        "source": "manual_ai_generated_set"
+      }
+    }
+  ]
+}

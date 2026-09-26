@@ -1,0 +1,231 @@
+/*
+ * Giao diện Roleplay Machine.
+ *
+ * Tệp này được esbuild nạp bằng loader `text` nên nó là một CHUỖI, và `apply`
+ * trong `index.tsx` mới là chỗ gắn nó vào `<style>` của tài liệu. Vì vậy ở đây
+ * không được có `@import`, không phông ngoài, không tài nguyên mạng.
+ *
+ * Mọi lớp đều có tiền tố `rp-`. Màu lấy từ biến CSS của DSH kèm giá trị dự
+ * phòng, để panel đọc được ở cả giao diện tối lẫn sáng.
+ */
+
+.rp-root {
+  --rp-text: var(--dsh-text-primary, #e6e6e6);
+  --rp-text-dim: var(--dsh-text-secondary, #a9a9a9);
+  --rp-border: var(--dsh-border-subtle, rgba(127, 127, 127, 0.35));
+  --rp-surface: var(--dsh-surface-raised, rgba(127, 127, 127, 0.08));
+  --rp-surface-2: var(--dsh-surface-sunken, rgba(127, 127, 127, 0.14));
+  --rp-accent: var(--dsh-accent, #6aa9ff);
+  --rp-danger: var(--dsh-danger, #e5484d);
+  --rp-good: var(--dsh-success, #46a758);
+  --rp-radius: 6px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  height: 100%;
+  min-height: 0;
+  padding: 8px;
+  color: var(--rp-text);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+/* ── Khung chung ─────────────────────────────────────────────────────────── */
+
+.rp-header { display: flex; flex-direction: column; gap: 6px; flex: 0 0 auto; }
+
+.rp-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.rp-tabs { display: flex; gap: 4px; }
+
+.rp-tab {
+  flex: 1 1 0;
+  padding: 4px 6px;
+  border: 1px solid var(--rp-border);
+  border-radius: var(--rp-radius);
+  background: transparent;
+  color: var(--rp-text-dim);
+  font: inherit;
+  cursor: pointer;
+}
+
+.rp-tab:hover { color: var(--rp-text); }
+
+.rp-tab-active,
+.rp-tab-active:hover {
+  background: var(--rp-surface-2);
+  border-color: var(--rp-accent);
+  color: var(--rp-text);
+  font-weight: 600;
+}
+
+.rp-body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: auto;
+}
+
+.rp-counts { color: var(--rp-text-dim); flex: 0 0 auto; }
+.rp-row { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.rp-field { display: flex; flex-direction: column; gap: 3px; }
+.rp-field > span { color: var(--rp-text-dim); }
+.rp-muted { color: var(--rp-text-dim); }
+.rp-hint { color: var(--rp-text-dim); font-style: italic; }
+.rp-empty { color: var(--rp-text-dim); padding: 8px 0; }
+.rp-error { color: var(--rp-danger); white-space: pre-wrap; }
+.rp-ok { color: var(--rp-good); white-space: pre-wrap; word-break: break-all; }
+
+.rp-pre {
+  margin: 0;
+  padding: 6px;
+  border: 1px solid var(--rp-border);
+  border-radius: var(--rp-radius);
+  background: var(--rp-surface);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 260px;
+  overflow: auto;
+}
+
+/* ── Điều khiển ──────────────────────────────────────────────────────────── */
+
+.rp-input,
+.rp-select,
+.rp-textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px 6px;
+  border: 1px solid var(--rp-border);
+  border-radius: var(--rp-radius);
+  background: var(--rp-surface);
+  color: var(--rp-text);
+  font: inherit;
+}
+
+.rp-textarea {
+  min-height: 56px;
+  resize: vertical;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+}
+
+.rp-button {
+  padding: 3px 8px;
+  border: 1px solid var(--rp-border);
+  border-radius: var(--rp-radius);
+  background: var(--rp-surface);
+  color: var(--rp-text);
+  font: inherit;
+  cursor: pointer;
+}
+
+.rp-button:hover:not(:disabled) { border-color: var(--rp-accent); }
+.rp-button:disabled { opacity: 0.55; cursor: default; }
+.rp-button-primary { border-color: var(--rp-accent); font-weight: 600; }
+.rp-button-danger:hover:not(:disabled) { border-color: var(--rp-danger); color: var(--rp-danger); }
+.rp-check { display: flex; align-items: center; gap: 4px; color: var(--rp-text-dim); }
+
+/* ── Thư viện ────────────────────────────────────────────────────────────── */
+
+.rp-list { display: flex; flex-direction: column; gap: 6px; min-height: 0; }
+
+.rp-card {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 6px;
+  border: 1px solid var(--rp-border);
+  border-radius: var(--rp-radius);
+  background: var(--rp-surface);
+}
+
+.rp-card-head { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.rp-card-title { font-weight: 600; flex: 1 1 auto; }
+
+.rp-card-prompt {
+  color: var(--rp-text-dim);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 11px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 72px;
+  overflow: hidden;
+}
+
+.rp-sealed { color: var(--rp-text-dim); font-style: italic; }
+
+.rp-badge {
+  padding: 1px 5px;
+  border: 1px solid var(--rp-border);
+  border-radius: 999px;
+  background: var(--rp-surface-2);
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.rp-badge-warn { border-color: var(--rp-danger); color: var(--rp-danger); }
+.rp-tags { display: flex; gap: 4px; flex-wrap: wrap; color: var(--rp-text-dim); font-size: 10px; }
+
+/* ── Rút bài ─────────────────────────────────────────────────────────────── */
+
+.rp-mode { display: flex; flex-direction: column; gap: 6px; }
+
+.rp-mode-option {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2px 6px;
+  align-items: start;
+  padding: 5px 6px;
+  border: 1px solid var(--rp-border);
+  border-radius: var(--rp-radius);
+  background: var(--rp-surface);
+  cursor: pointer;
+}
+
+.rp-mode-option input { margin-top: 2px; }
+.rp-mode-label { font-weight: 600; }
+.rp-mode-desc { grid-column: 2; color: var(--rp-text-dim); font-size: 11px; }
+.rp-meter { display: flex; flex-direction: column; gap: 2px; }
+.rp-meter-head { display: flex; justify-content: space-between; gap: 6px; }
+
+.rp-meter-bar {
+  height: 5px;
+  border-radius: 999px;
+  background: var(--rp-surface-2);
+  overflow: hidden;
+}
+
+.rp-meter-fill { height: 100%; background: var(--rp-accent); }
+.rp-meter-fill-danger { background: var(--rp-danger); }
+.rp-notes { margin: 0; padding-left: 16px; color: var(--rp-text-dim); }
+
+/* ── Sửa card ────────────────────────────────────────────────────────────── */
+
+.rp-form { display: flex; flex-direction: column; gap: 8px; }
+.rp-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+.rp-fragment { display: flex; flex-direction: column; gap: 3px; }
+.rp-fragment-head { display: flex; justify-content: space-between; align-items: baseline; gap: 6px; }
+.rp-counter { font-size: 10px; color: var(--rp-text-dim); }
+.rp-counter-over { color: var(--rp-danger); font-weight: 600; }
+
+.rp-actions {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  position: sticky;
+  bottom: 0;
+  padding-top: 6px;
+}

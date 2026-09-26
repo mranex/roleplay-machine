@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "pressure_the_sinking_floor",
+  "title": "The Sinking Floor",
+  "type": [
+    "pressure"
+  ],
+  "description": "The environment physically deteriorates the longer the player resists.",
+  "chaos": 5,
+  "tags": [
+    "dark",
+    "hell",
+    "pressure"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "horror",
+      "fantasy"
+    ],
+    "compatibleTags": [
+      "dark",
+      "hell"
+    ],
+    "requiredAnyTags": [
+      "hell"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The floor of the ballroom is slowly dissolving into a pool of burning, molten gold. The ambient heat is rising to lethal levels. The player cannot simply stand still or wait; staying in one place means sinking and burning alive. Furthermore, every time the player denies a desire or refuses an offer, the floor beneath them sinks faster, forcing them to keep moving forward through the crowd.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "The environment must constantly threaten the player with physical harm if they stall.",
+    "contentBoundary": ""
+  },
+  "generationHints": {
+    "tone": [
+      "urgent",
+      "dangerous",
+      "claustrophobic"
+    ],
+    "preferredUse": "Use to prevent the player from turtle-ing or ignoring the NPC.",
+    "avoidUse": ""
+  },
+  "qualityNotes": [
+    "Provides a ticking clock element.",
+    "Connects the act of resistance directly to environmental danger."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "2026-05-05T01:04:07+07:00",
+    "updatedAt": "2026-09-26T09:25:35.839Z",
+    "source": "manual_ai_generated_set"
+  }
+}

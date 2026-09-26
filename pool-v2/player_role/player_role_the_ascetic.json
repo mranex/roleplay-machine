@@ -1,0 +1,64 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "player_role_the_ascetic",
+  "title": "The Ascetic Mortal",
+  "type": [
+    "player_role"
+  ],
+  "description": "An ordinary human who has sworn off all worldly desires.",
+  "chaos": 2,
+  "tags": [
+    "dark",
+    "desire",
+    "hell",
+    "mortal"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "horror",
+      "fantasy"
+    ],
+    "compatibleTags": [
+      "dark",
+      "hell"
+    ],
+    "requiredAnyTags": [
+      "hell"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [
+      "god",
+      "overpowered"
+    ],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "You play an ordinary human who has taken a strict vow of asceticism, claiming to have no earthly desires. You are completely powerless: you have no magic, no special authority, no hidden weapons, and no secret knowledge. Your identity is strictly bound to being a normal, physically vulnerable person who accidentally stumbled into this realm. You cannot invent powers, items, or social standing.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "The player character is strictly a powerless, ordinary human and cannot self-insert abilities or items.",
+    "contentBoundary": "Enforce the player's lack of power firmly if they attempt to god-emote."
+  },
+  "generationHints": {
+    "tone": [
+      "vulnerable",
+      "stoic",
+      "desperate"
+    ],
+    "preferredUse": "Best used as a contrast to the overwhelming indulgence of the setting.",
+    "avoidUse": "Do not allow the player to suddenly manifest magical resistance."
+  },
+  "qualityNotes": [
+    "Strictly limits player agency to narrative choices rather than power fantasies."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "2026-05-05T01:04:07+07:00",
+    "updatedAt": "2026-09-26T09:25:35.838Z",
+    "source": "manual_ai_generated_set"
+  }
+}

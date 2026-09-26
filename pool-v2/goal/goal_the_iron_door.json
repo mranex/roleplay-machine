@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "goal_the_iron_door",
+  "title": "The Iron Door",
+  "type": [
+    "goal"
+  ],
+  "description": "The only escape route from Paradise Hell.",
+  "chaos": 1,
+  "tags": [
+    "dark",
+    "hell",
+    "objective"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [
+      "horror",
+      "fantasy"
+    ],
+    "compatibleTags": [
+      "dark",
+      "hell"
+    ],
+    "requiredAnyTags": [
+      "hell"
+    ],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "At the far end of the ballroom stands a heavy, unadorned Iron Door. It represents logic, reality, and deprivation. The player's concrete win condition is to navigate through the chaotic ballroom, reach the Iron Door, and pull the handle to escape the dimension. They must accomplish this without succumbing to any of Malphas's temptations.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "The Iron Door must remain visible and accessible, but pathing to it is hindered by the crowd and the sinking floor.",
+    "contentBoundary": ""
+  },
+  "generationHints": {
+    "tone": [
+      "hopeful",
+      "stark",
+      "imposing"
+    ],
+    "preferredUse": "The ultimate endpoint of the scene.",
+    "avoidUse": "Do not move the door or make it an illusion."
+  },
+  "qualityNotes": [
+    "Gives a clear spatial objective to a psychological scene."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "2026-05-05T01:04:07+07:00",
+    "updatedAt": "2026-09-26T09:25:35.840Z",
+    "source": "manual_ai_generated_set"
+  }
+}

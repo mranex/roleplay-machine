@@ -1,0 +1,60 @@
+{
+  "schemaVersion": "rsm-card-v1",
+  "id": "pressure_eroding_self",
+  "title": "Eroding Self",
+  "type": [
+    "pressure"
+  ],
+  "description": "The labyrinth does not just pleasure; it consumes. The longer you stay, the more your identity frays — your name, your past, your very sense of self dissolve like mist. If you do not escape soon, you will become a hollow, eternally satiated fixture of this dream.",
+  "chaos": 3,
+  "tags": [
+    "nsfw",
+    "psychological",
+    "memory loss",
+    "urgency",
+    "consequence"
+  ],
+  "compatibility": {
+    "universal": false,
+    "domain": [],
+    "compatibleTags": [
+      "nsfw",
+      "surreal",
+      "desire",
+      "labyrinth",
+      "psychological"
+    ],
+    "requiredAnyTags": [],
+    "requiredAllTags": [],
+    "incompatibleTags": [],
+    "compatibleCardIds": [],
+    "incompatibleCardIds": []
+  },
+  "visibility": "public",
+  "weight": 10,
+  "fragments": {
+    "prompt": "The labyrinth erodes the player's identity, making escape a race against complete dissolution.",
+    "firstMessage": "",
+    "hiddenTruth": "",
+    "heavenRule": "Whenever the player hesitates, tries to leave, or indulges too deeply, remind them of fading memories. Show moments of derealization.",
+    "contentBoundary": "Memory loss must be shown through disorientation, not debilitating confusion that halts play."
+  },
+  "generationHints": {
+    "tone": [
+      "anxious",
+      "melancholic",
+      "urgent"
+    ],
+    "preferredUse": "To prevent the player from simply staying and enjoying the fantasy; forces action.",
+    "avoidUse": "Do not make identity loss instant; it grinds down over interactions."
+  },
+  "qualityNotes": [
+    "Include moments like forgetting a family face or struggling to recall your name."
+  ],
+  "metadata": {
+    "author": "ai",
+    "createdAt": "",
+    "updatedAt": "2026-09-26T09:25:35.839Z",
+    "source": "manual_ai_generated_set"
+  }
+}
