@@ -35,6 +35,7 @@
     "lib/runtime.js",
     "lib/client.js",
     "skills/**/*",
+    "docs/**/*.md",
     "cordis.patch.yml",
     "README.md"
   ],

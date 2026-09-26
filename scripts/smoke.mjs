@@ -56,6 +56,32 @@ const contexts = []
 const listeners = new Map()
 const logs = []
 
+/**
+ * Provider subagent giả: đủ capability để chốt chặn cấu hình cho qua, và trả payload theo nhãn.
+ * Nhờ nó mà smoke kiểm được cả tầng actor lẫn tầng writer trên artifact đã build, không tốn model call.
+ */
+const fakeSubagents = {
+  getProvider: () => ({
+    name: 'spawn',
+    inheritsParentContext: false,
+    capabilities: { agentOptions: true, outputSchema: true, depthLimit: true, toolFilter: true, persona: true },
+  }),
+  start: async (_name, request) => {
+    const label = String(request.label ?? '')
+    const structured = label.startsWith('writer:')
+      ? { title: 'Ngưỡng cửa', body: 'Quản gia đứng ở ngưỡng cửa và chờ. '.repeat(12), notes: ['ánh nến nghiêng đi'] }
+      : {
+        actor_id: 'npc_butler',
+        interpretation: 'Đầu bếp vừa gọi ta.',
+        emotion: 'điềm tĩnh',
+        intent_type: 'dialogue',
+        intent_content: 'Dạ, thưa ngài.',
+        belief_claims: [{ claim: 'Đầu bếp đang giấu một kế hoạch bí mật.', confidence: 0.7 }],
+      }
+    return { result: Promise.resolve({ stopReason: 'completed', structured }), dispose: async () => {} }
+  },
+}
+
 const fakeAgentCtx = {
   systemPrompt: {
     section: entry => { sections.push(entry); return () => {} },
@@ -71,6 +97,7 @@ const host = {
     if (key === 'tools') return { register: definition => { registered.push(definition); return () => {} } }
     if (key === 'agents') return { list: () => [agent] }
     if (key === 'workspaceRegistry') return { list: () => [{ path: ws }] }
+    if (key === 'subagents') return fakeSubagents
     return undefined
   },
   inject: (_deps, cb) => { cb(host); return undefined },
@@ -150,6 +177,49 @@ check('xong hết bước thì thắng', lastStep.finished === true, JSON.string
 const ended = await call('rp_end', { sceneId: winRun.sceneId, epilogue: 'Mọi chuyện khép lại đúng như nó phải thế.' })
 outputs.push(ended)
 check('chốt được ván và ghi ending.md', ended.ok === true && fs.existsSync(path.join(ws, 'roleplay-machine', 'runs', winRun.sceneId, 'ending.md')))
+
+console.log('[smoke] Multi-Actor-Agent Mode và Story trên artifact đã build')
+const actorRun = await call('rp_new_scene', { mode: 'boss_mode', seed: 'smoke-actor' })
+const cast = await call('rp_actor_cast', {
+  sceneId: actorRun.sceneId,
+  playerLocation: 'kitchen',
+  locations: { kitchen: { adjacent: ['pantry'] }, pantry: { adjacent: ['kitchen'] } },
+  cast: [{
+    id: 'npc_butler',
+    kind: 'npc',
+    name: 'Quản gia',
+    role: 'quản gia trung thành',
+    location: 'kitchen',
+    allowedKnowledge: ['Ta phục vụ lâu đài này.'],
+    perceive: ['same_room', 'addressed'],
+    traits: { suspicion_player: 1 },
+  }],
+})
+check('khai được dàn actor', cast.ok === true, JSON.stringify(cast.issues).slice(0, 160))
+
+const actorTurn = await call('rp_actor_turn', { sceneId: actorRun.sceneId, playerAction: 'Tôi gọi quản gia.', volume: 'normal' })
+check('actor mode chạy được một lượt', actorTurn.ok === true && actorTurn.turn === 1, JSON.stringify(actorTurn.issues).slice(0, 160))
+check('lời nói của actor thành sự thật công khai', JSON.stringify(actorTurn.facts).includes('Dạ, thưa ngài.'))
+
+const logged = await call('rp_log', { sceneId: actorRun.sceneId, narration: 'Quản gia cúi đầu.', outcome: 'Quản gia đã đáp lời.' })
+check('lời kể vào transcript, outcome được vá', logged.ok === true && logged.outcome === 'Quản gia đã đáp lời.', JSON.stringify(logged).slice(0, 160))
+
+const exported = await call('rp_export', { sceneId: actorRun.sceneId, pov: 'player' })
+const actorSecrets = (() => {
+  const file = JSON.parse(fs.readFileSync(path.join(ws, 'roleplay-machine', 'scenes', `${actorRun.sceneId}.json`), 'utf8'))
+  return [file.sceneCore.hiddenTruth].filter(text => typeof text === 'string' && text.trim() !== '')
+})()
+const playerMaterial = fs.readFileSync(path.join(exported.dir, 'material-player.md'), 'utf8')
+check('export ghi được hồ sơ đầy đủ', fs.existsSync(exported.markdown) && fs.existsSync(exported.json))
+check('kết quả tool của export không chứa bí mật', !JSON.stringify(exported).includes(actorSecrets[0] ?? '\u0000'))
+check('nguyên liệu POV1 không chứa bí mật ván', actorSecrets.every(secret => !playerMaterial.includes(secret)))
+check('nguyên liệu POV1 chỉ có thứ người chơi biết', playerMaterial.includes('Dạ, thưa ngài.'))
+
+const story = await call('rp_write', { sceneId: actorRun.sceneId, view: 'player', length: 'short', style: 'sparse' })
+check('viết được truyện POV1', story.ok === true && story.guard === 'pass', JSON.stringify(story.issues).slice(0, 160))
+check('truyện lưu ra đĩa có front matter', fs.existsSync(path.join(ws, 'roleplay-machine', 'runs', actorRun.sceneId, 'stories', 'player.md')))
+const kamiStory = await call('rp_write', { sceneId: actorRun.sceneId, view: 'kami' })
+check('truyện POV2 không trả nội dung về kết quả tool', kamiStory.ok === true && kamiStory.body === undefined, JSON.stringify(kamiStory).slice(0, 160))
 
 console.log('[smoke] kiểm tra ranh giới bí mật')
 const blob = JSON.stringify(outputs)

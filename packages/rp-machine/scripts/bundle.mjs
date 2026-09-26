@@ -95,3 +95,19 @@ if (!clientText.startsWith('window.__ModuleLoader__.load(')) throw new Error('li
 if (!/return module\.exports; \} \}\);$/.test(clientText.trimEnd())) throw new Error('lib/client.js thiếu footer đóng module')
 const clientBytes = fs.statSync(clientOut).size
 console.log(`[bundle] lib/client.js ok (${(clientBytes / 1024).toFixed(1)} KB, module trình duyệt, react external)`)
+
+// ── Chép tài liệu vào gói ─────────────────────────────────────────────────
+// Tài liệu sống ở gốc repo (`<repo>/docs`), nhưng `pnpm pack` chỉ gom những gì nằm trong package. Không
+// chép thì README trong gói đã cài trỏ tới những file không tồn tại — đúng loại lỗi mà người dùng cuối
+// gặp phải. Chép ở bước build để bản trong gói không bao giờ lệch bản ở repo.
+const repoDocs = path.resolve(packageRoot, '..', '..', 'docs')
+const packageDocs = path.join(packageRoot, 'docs')
+if (fs.existsSync(repoDocs)) {
+  fs.rmSync(packageDocs, { recursive: true, force: true })
+  fs.mkdirSync(packageDocs, { recursive: true })
+  const copied = fs.readdirSync(repoDocs).filter(name => name.endsWith('.md'))
+  for (const name of copied) fs.copyFileSync(path.join(repoDocs, name), path.join(packageDocs, name))
+  console.log(`[bundle] docs/ ok (${copied.length} tệp .md chép từ gốc repo)`)
+} else {
+  console.log('[bundle] docs/: không thấy thư mục docs ở gốc repo, bỏ qua')
+}

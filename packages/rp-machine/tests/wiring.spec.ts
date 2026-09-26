@@ -150,7 +150,7 @@ describe('apply() trên host giả', () => {
     const { host, registered } = makeHost(ws)
     apply(host as never)
     expect(registered.map(tool => tool.name)).toEqual([...RP_TOOL_NAMES])
-    expect(registered).toHaveLength(15)
+    expect(registered).toHaveLength(18)
   })
 
   it('gắn bản giao kèo Thiên Đạo với hai trục luật', () => {
@@ -310,7 +310,7 @@ describe('apply() trên host giả', () => {
 
     // Host kiểu Cordis: chưa inject thì đọc thẳng là ném lỗi, nên nếu plugin đọc sai chỗ, apply sẽ nổ.
     expect(injected.has('subagents')).toBe(true)
-    expect(registered).toHaveLength(15)
+    expect(registered).toHaveLength(18)
 
     const call = async (toolName: string, args: Record<string, unknown>): Promise<Record<string, unknown>> => {
       const tool = registered.find(entry => entry.name === toolName)

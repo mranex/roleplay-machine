@@ -80,6 +80,30 @@ import {
   runActorTurn,
   saveActorSnapshot,
 } from './actor/turn'
+import {
+  appendNarration,
+  appendTurn,
+  exportDirOf,
+  loadStoryTurns,
+  storyDirOf,
+  transcriptFileOf,
+  turnRecordFromActorTurn,
+  turnRecordFromSingleTurn,
+  withTurnOutcome,
+  type StoryTurn,
+} from './story/transcript'
+import { POVS, buildStoryExport, povLabel, renderMaterial, type Pov, type StoryExport } from './story/export'
+import { assertPovSafe, povForbidden, PovViolation } from './story/guard'
+import {
+  WRITER_LENGTHS,
+  WRITER_OMIT,
+  WRITER_STYLES,
+  renderWriterPrompt,
+  wordCount,
+  type WriterBrief,
+} from './story/brief'
+import { createSpawnWriterRunner, type WriterRunner } from './story/session'
+import type { ActorDefinition } from './actor/model'
 
 export interface AgentLike {
   readonly id?: string
@@ -133,6 +157,9 @@ export const RP_TOOL_NAMES: readonly string[] = [
   'rp_actor_cast',
   'rp_actor_turn',
   'rp_actor_state',
+  'rp_log',
+  'rp_export',
+  'rp_write',
 ]
 
 const SCENE_ID = { type: 'string', description: 'Định danh scene/ván (bỏ trống thì lấy ván mới nhất)' }
@@ -484,9 +511,19 @@ export function createRpTools(deps: RpToolDeps): RpToolDefinition[] {
 
         const action = String(args['playerAction'] ?? '').trim()
         const signals = detectPlayerSignals(action)
-        const next = recordTurn(state, action, '', now())
+        const stamp = now()
+        const next = recordTurn(state, action, '', stamp)
         const eventDue = isEventDue(next, scene.chaos.eventEvery)
         saveRun(root, next)
+
+        // Ghi transcript cho cả chế độ một-model: export và writer phải chạy được ở cả hai chế độ.
+        appendTurn(root, turnRecordFromSingleTurn({
+          sceneId: next.sceneId,
+          at: stamp,
+          state: next,
+          action: { actor: 'player', type: 'speak', text: action, volume: 'normal' },
+          playerLocation: '',
+        }))
 
         const instructions: string[] = []
         if (signals.bailout) {
@@ -981,6 +1018,17 @@ export function createRpTools(deps: RpToolDeps): RpToolDefinition[] {
           notes: [...snapshot.notes, ...result.issues.map(issue => `${issue.where}: ${issue.message}`)],
         })
 
+        // Transcript là nguyên liệu của export/writer, và được ghi bằng CODE từ chính những gì pipeline đã
+        // tính: ai tri giác được gì, actor hiểu gì, cái gì thành canon. Không tốn model call nào.
+        appendTurn(root, turnRecordFromActorTurn({
+          sceneId: state.sceneId,
+          at: now(),
+          state: recorded,
+          definitions: snapshot.cast,
+          action,
+          result,
+        }))
+
         return {
           ok: true,
           sceneId: state.sceneId,
@@ -1043,14 +1091,426 @@ export function createRpTools(deps: RpToolDeps): RpToolDefinition[] {
         }
       },
     },
+    {
+      name: 'rp_log',
+      description:
+        'Nộp lời kể bạn vừa viết cho lượt này để lưu vào transcript, và ghi lại HỆ QUẢ thật của lượt. Gọi NGAY SAU khi kể xong. Lời kể được dán nhãn "rendering, không phải canon" vì nó có thể chứa chi tiết bạn tự thêm.',
+      parameters: {
+        type: 'object',
+        properties: {
+          sceneId: SCENE_ID,
+          narration: { type: 'string', description: 'Nguyên văn lời kể của lượt này' },
+          outcome: { type: 'string', description: 'Một câu: việc gì đã THỰC SỰ thay đổi trong lượt (không phải điều lẽ ra phải xảy ra)' },
+          turn: { type: 'number', description: 'Số lượt; bỏ trống thì lấy lượt mới nhất' },
+        },
+        required: ['narration'],
+        additionalProperties: false,
+      },
+      output: jsonOutput({
+        type: 'object',
+        additionalProperties: true,
+        properties: {
+          ok: { type: 'boolean' },
+          sceneId: { type: 'string' },
+          turn: { type: 'number' },
+          turns: { type: 'number' },
+          narrated: { type: 'number' },
+          outcome: { type: 'string' },
+          transcript: { type: 'string' },
+        },
+      }),
+      execute: (args, exec) => {
+        const root = requireWorkspace(exec)
+        const { state } = resolveRun(root, args)
+        const narration = String(args['narration'] ?? '').trim()
+        if (narration === '') throw new Error('rp_log cần nội dung lời kể.')
+        const turn = Number.isFinite(Number(args['turn'])) ? Number(args['turn']) : state.turn
+        if (turn < 1) throw new Error('Chưa có lượt nào để gắn lời kể. Gọi rp_turn hoặc rp_actor_turn trước.')
+
+        const outcome = String(args['outcome'] ?? '').trim()
+        appendNarration(root, { sceneId: state.sceneId, turn, at: now(), narration, ...(outcome === '' ? {} : { outcome }) })
+
+        // Vá `outcome` trong state.json: trước đây nó luôn rỗng vì hệ quả chỉ biết được sau khi kể.
+        if (outcome !== '') saveRun(root, withTurnOutcome(state, turn, outcome))
+
+        const turns = loadStoryTurns(root, state.sceneId)
+        return {
+          ok: true,
+          sceneId: state.sceneId,
+          turn,
+          turns: turns.length,
+          narrated: turns.filter(entry => entry.narration !== undefined && entry.narration !== '').length,
+          outcome,
+          transcript: transcriptFileOf(root, state.sceneId),
+        }
+      },
+    },
+    {
+      name: 'rp_export',
+      description:
+        'Xuất toàn bộ ván thành hồ sơ lưu trữ: dòng thời gian sự thật, bản đồ ai biết gì, nội tâm actor, lời kể, và nguyên liệu cắt sẵn theo từng góc nhìn. Không gọi model. Trả về đường dẫn và số liệu, không trả nội dung bí mật.',
+      parameters: {
+        type: 'object',
+        properties: {
+          sceneId: SCENE_ID,
+          pov: { type: 'string', enum: [...POVS], description: 'Cắt thêm một tệp nguyên liệu cho góc nhìn này' },
+          actorId: { type: 'string', description: 'Bắt buộc khi pov = npc' },
+          allPovs: { type: 'boolean', description: 'Cắt nguyên liệu cho mọi góc nhìn của ván này' },
+        },
+        additionalProperties: false,
+      },
+      output: jsonOutput({
+        type: 'object',
+        additionalProperties: true,
+        properties: {
+          ok: { type: 'boolean' },
+          sceneId: { type: 'string' },
+          dir: { type: 'string' },
+          markdown: { type: 'string' },
+          json: { type: 'string' },
+          materials: { type: 'array', items: { type: 'object', additionalProperties: true } },
+          summary: { type: 'object', additionalProperties: true },
+          sections: { type: 'array', items: { type: 'string' } },
+          issues: { type: 'array', items: { type: 'string' } },
+        },
+      }),
+      execute: (args, exec) => {
+        const root = requireWorkspace(exec)
+        const { state, scene } = resolveRun(root, args)
+        const turns = loadStoryTurns(root, state.sceneId)
+        if (turns.length === 0) {
+          throw new Error('Ván này chưa có lượt nào trong transcript. Transcript được ghi tự động ở mỗi lượt; hãy chơi ít nhất một lượt.')
+        }
+        const snapshot = loadActorSnapshot(root, state.sceneId)
+        const definitions = snapshot?.cast ?? []
+        const exp = buildStoryExport({
+          sceneId: state.sceneId,
+          generatedAt: now(),
+          turns,
+          scene,
+          state,
+          definitions,
+          ...(snapshot === undefined ? {} : { world: snapshot.world }),
+        })
+
+        const dir = exportDirOf(root, state.sceneId)
+        fs.mkdirSync(dir, { recursive: true })
+        const markdownPath = path.join(dir, 'story.md')
+        const jsonPath = path.join(dir, 'story.json')
+        fs.writeFileSync(markdownPath, exp.markdown, 'utf8')
+        fs.writeFileSync(jsonPath, `${JSON.stringify(exp.json, null, 2)}\n`, 'utf8')
+
+        const materials: Array<{ pov: string; label: string; path: string; bytes: number }> = []
+        const jobs: Array<{ pov: Pov; actorId?: string }> = []
+        if (args['allPovs'] === true) {
+          jobs.push({ pov: 'player' }, { pov: 'kami' }, { pov: 'omniscient' })
+          // Mỗi actor một tệp nguyên liệu riêng: đây là chỗ POV3 trở thành cụ thể.
+          for (const definition of definitions) jobs.push({ pov: 'npc', actorId: definition.id })
+        }
+        const single = typeof args['pov'] === 'string' ? args['pov'].trim() : ''
+        if (single !== '') {
+          if (!(POVS as readonly string[]).includes(single)) {
+            throw new Error(`pov không hợp lệ: ${single}. Chọn một trong ${POVS.join(', ')}.`)
+          }
+          if (single === 'npc') {
+            const actorId = typeof args['actorId'] === 'string' ? args['actorId'].trim() : ''
+            if (actorId === '') throw new Error('pov = npc cần actorId.')
+            if (!definitions.some(definition => definition.id === actorId)) {
+              throw new Error(`Không có actor "${actorId}". Cast: ${definitions.map(definition => definition.id).join(', ') || '(rỗng)'}`)
+            }
+            jobs.push({ pov: 'npc', actorId })
+          } else {
+            jobs.push({ pov: single as Pov })
+          }
+        }
+
+        for (const job of jobs) {
+          const material = renderMaterial(exp, job.pov, job.actorId)
+          const slug = job.actorId === undefined ? job.pov : `npc-${job.actorId}`
+          const file = path.join(dir, `material-${slug}.md`)
+          fs.writeFileSync(file, material, 'utf8')
+          materials.push({ pov: job.pov, label: povLabel(job.pov, job.actorId, definitions), path: file, bytes: material.length })
+        }
+
+        return {
+          ok: true,
+          sceneId: state.sceneId,
+          dir,
+          markdown: markdownPath,
+          json: jsonPath,
+          materials,
+          summary: exp.summary,
+          sections: exp.sections.map(section => `${section.id}:${section.classification}`),
+          issues: [],
+        }
+      },
+    },
+    {
+      name: 'rp_write',
+      description:
+        'Viết lại ván thành truyện ngắn theo một góc nhìn, bằng một subagent writer có context sạch: nó CHỈ nhận hồ sơ đã cắt theo góc nhìn đó, không đọc được gì khác. Lưu vào runs/<id>/stories/. Trả về tiêu đề + đường dẫn + số từ; chỉ trả nội dung truyện khi góc nhìn là người chơi, hoặc khi reveal = true (người chơi đã đồng ý có spoil).',
+      parameters: {
+        type: 'object',
+        properties: {
+          sceneId: SCENE_ID,
+          view: { type: 'string', enum: [...POVS], description: 'player = POV1 người chơi · npc = POV3 một nhân vật · kami = POV2 Thiên Đạo · omniscient = toàn tri' },
+          actorId: { type: 'string', description: 'Bắt buộc khi view = npc' },
+          length: { type: 'string', enum: [...WRITER_LENGTHS] },
+          style: { type: 'string', enum: [...WRITER_STYLES] },
+          focus: { type: 'string', description: 'Dặn thêm, ví dụ "tập trung vào quan hệ giữa đầu bếp và quản gia"' },
+          omit: { type: 'array', items: { type: 'string' }, description: `Nhãn lược bỏ: ${WRITER_OMIT.join(', ')} — hoặc câu tự do` },
+          language: { type: 'string' },
+          allViews: { type: 'boolean', description: 'Viết song song POV1 + POV2 + POV3 cho mọi actor trong cast (tốn nhiều model call)' },
+          reveal: { type: 'boolean', description: 'Trả cả nội dung truyện về kết quả tool. Chỉ dùng khi người chơi đã yêu cầu có spoil.' },
+        },
+        required: ['view'],
+        additionalProperties: false,
+      },
+      output: jsonOutput({
+        type: 'object',
+        additionalProperties: true,
+        properties: {
+          ok: { type: 'boolean' },
+          sceneId: { type: 'string' },
+          stories: { type: 'array', items: { type: 'object', additionalProperties: true } },
+          body: { type: 'string' },
+          title: { type: 'string' },
+          guard: { type: 'string' },
+          issues: { type: 'array', items: { type: 'string' } },
+        },
+      }),
+      execute: async (args, exec) => {
+        const root = requireWorkspace(exec)
+        const { state, scene } = resolveRun(root, args)
+        const turns = loadStoryTurns(root, state.sceneId)
+        if (turns.length === 0) throw new Error('Ván này chưa có lượt nào trong transcript, nên chưa có gì để viết.')
+
+        const snapshot = loadActorSnapshot(root, state.sceneId)
+        const definitions = snapshot?.cast ?? []
+        const exp = buildStoryExport({
+          sceneId: state.sceneId,
+          generatedAt: now(),
+          turns,
+          scene,
+          state,
+          definitions,
+          ...(snapshot === undefined ? {} : { world: snapshot.world }),
+        })
+
+        const requests = planWriterRequests(args, definitions)
+        const briefBase = {
+          length: (WRITER_LENGTHS as readonly string[]).includes(String(args['length'])) ? (String(args['length']) as WriterBrief['length']) : 'medium' as const,
+          style: (WRITER_STYLES as readonly string[]).includes(String(args['style'])) ? (String(args['style']) as WriterBrief['style']) : 'plain' as const,
+          ...(typeof args['focus'] === 'string' && args['focus'].trim() !== '' ? { focus: args['focus'].trim() } : {}),
+          ...(Array.isArray(args['omit']) ? { omit: (args['omit'] as unknown[]).filter((entry): entry is string => typeof entry === 'string' && entry.trim() !== '') } : {}),
+          ...(typeof args['language'] === 'string' && args['language'].trim() !== '' ? { language: args['language'].trim() } : {}),
+        }
+
+        const runner = createSpawnWriterRunner({
+          subagents: deps.subagents,
+          ...(deps.actorProvider === undefined ? {} : { providerName: deps.actorProvider }),
+          parent: exec?.agent,
+          log: message => deps.log?.(`[rp-machine] ${message}`),
+        })
+
+        const storiesDir = storyDirOf(root, state.sceneId)
+        fs.mkdirSync(storiesDir, { recursive: true })
+
+        const results = await Promise.all(
+          requests.map(request => writeOneStory({ exp, scene, turns, definitions, request, briefBase, runner, storiesDir, at: now() })),
+        )
+
+        const ok = results.every(entry => entry.written)
+        const issues = results.flatMap(entry => entry.issues)
+        const first = results.find(entry => entry.written && entry.body !== undefined)
+        const reveal = args['reveal'] === true
+        // Chỉ trả nội dung khi an toàn để người chơi đọc: POV1, hoặc khi họ đã đồng ý có spoil.
+        const canReveal = reveal || requests.length === 1 && requests[0]?.pov === 'player'
+
+        return {
+          ok,
+          sceneId: state.sceneId,
+          stories: results.map(entry => ({
+            view: entry.request.pov,
+            ...(entry.request.actorId === undefined ? {} : { actorId: entry.request.actorId }),
+            label: povLabel(entry.request.pov, entry.request.actorId, definitions),
+            title: entry.title ?? '',
+            path: entry.path ?? '',
+            words: entry.words ?? 0,
+            notes: entry.notes,
+            guard: entry.guard,
+          })),
+          guard: results.every(entry => entry.guard === 'pass') ? 'pass' : 'violation',
+          ...(canReveal && first?.body !== undefined ? { body: first.body, title: first.title ?? '' } : {}),
+          issues,
+        }
+      },
+    },
   ]
 
   return tools
 }
 
-/** Liệt kê scene, chịu lỗi đọc file. */
-function listScenesSafe(root: string): { id: string; mode: string; chaosTotal: number }[] {
+// ── Writer: lập kế hoạch và chạy ──────────────────────────────────────────
+
+interface WriterRequest {
+  readonly pov: Pov
+  readonly actorId?: string
+}
+
+/** Góc nhìn nào sẽ được viết trong lần gọi này. */
+export function planWriterRequests(args: Record<string, unknown>, definitions: readonly ActorDefinition[]): WriterRequest[] {
+  const castHint = definitions.map(definition => definition.id).join(', ') || '(rỗng)'
+
+  if (args['allViews'] === true) {
+    const requests: WriterRequest[] = [{ pov: 'player' }, { pov: 'kami' }]
+    // Trần 3 actor: mỗi góc nhìn là một model call, và một ván 6 actor sẽ thành 8 call cho một lần bấm.
+    for (const definition of definitions.slice(0, 3)) requests.push({ pov: 'npc', actorId: definition.id })
+    return requests
+  }
+
+  const view = String(args['view'] ?? '').trim()
+  if (!(POVS as readonly string[]).includes(view)) {
+    throw new Error(`view không hợp lệ: "${view}". Chọn một trong ${POVS.join(', ')}.`)
+  }
+  if (view === 'npc') {
+    const actorId = typeof args['actorId'] === 'string' ? args['actorId'].trim() : ''
+    if (actorId === '') throw new Error('view = npc cần actorId.')
+    if (!definitions.some(definition => definition.id === actorId)) {
+      throw new Error(`Không có actor "${actorId}". Cast: ${castHint}`)
+    }
+    return [{ pov: 'npc', actorId }]
+  }
+  return [{ pov: view as Pov }]
+}
+
+interface WriteOutcome {
+  readonly request: WriterRequest
+  readonly written: boolean
+  readonly path?: string
+  readonly title?: string
+  readonly words?: number
+  readonly body?: string
+  readonly notes: readonly string[]
+  readonly guard: 'pass' | 'violation' | 'skipped'
+  readonly issues: readonly string[]
+}
+
+function renderStoryFile(input: {
+  readonly sceneId: string
+  readonly label: string
+  readonly brief: WriterBrief
+  readonly title: string
+  readonly body: string
+  readonly notes: readonly string[]
+  readonly words: number
+  readonly at: string
+}): string {
+  const front = [
+    '---',
+    `scene: ${input.sceneId}`,
+    `view: ${input.label}`,
+    `length: ${input.brief.length}`,
+    `style: ${input.brief.style}`,
+    `words: ${input.words}`,
+    `generated: ${input.at}`,
+    'guard: không có chuỗi rò rỉ ngoài góc nhìn',
+    '---',
+    '',
+    `# ${input.title}`,
+    '',
+    input.body,
+  ].join('\n')
+  if (input.notes.length === 0) return `${front}\n`
+  return [
+    front,
+    '',
+    '## Chi tiết người viết tự thêm (không có trong hồ sơ)',
+    '',
+    ...input.notes.map(note => `- ${note}`),
+    '',
+  ].join('\n')
+}
+
+async function writeOneStory(input: {
+  readonly exp: StoryExport
+  readonly scene: GeneratedScene
+  readonly turns: readonly StoryTurn[]
+  readonly definitions: readonly ActorDefinition[]
+  readonly request: WriterRequest
+  readonly briefBase: Omit<WriterBrief, 'pov' | 'actorId'>
+  readonly runner: WriterRunner
+  readonly storiesDir: string
+  readonly at: string
+}): Promise<WriteOutcome> {
+  const { request } = input
+  const brief: WriterBrief = {
+    pov: request.pov,
+    ...(request.actorId === undefined ? {} : { actorId: request.actorId }),
+    ...input.briefBase,
+  }
+
+  const material = renderMaterial(input.exp, request.pov, request.actorId)
+  const forbidden = povForbidden({
+    pov: request.pov,
+    ...(request.actorId === undefined ? {} : { actorId: request.actorId }),
+    scene: input.scene,
+    definitions: input.definitions,
+    turns: input.turns,
+    material,
+  })
+  const prompt = renderWriterPrompt({ exp: input.exp, brief, definitions: input.definitions })
+  const label = request.actorId === undefined ? `writer:${request.pov}` : `writer:${request.pov}:${request.actorId}`
+
+  const outcome = await input.runner.run({
+    pov: request.pov,
+    ...(request.actorId === undefined ? {} : { actorId: request.actorId }),
+    label,
+    prompt,
+    forbidden,
+  })
+  const issues = [...outcome.issues]
+
+  if (outcome.output === undefined) {
+    return {
+      request,
+      written: false,
+      notes: [],
+      guard: 'skipped',
+      issues: issues.length === 0 ? ['Writer không trả nội dung dùng được.'] : issues,
+    }
+  }
+
+  const { title, body, notes } = outcome.output
   try {
+    // Chốt chặn cuối, ngay trước khi ghi đĩa: một truyện rò rỉ thì KHÔNG bao giờ được lưu.
+    assertPovSafe(`${title}\n${body}`, forbidden, request.pov)
+  } catch (error) {
+    const detail = error instanceof PovViolation
+      ? error.leaked.map(entry => `${entry.source}: ${entry.text.slice(0, 80)}`).join(' | ')
+      : String(error)
+    return { request, written: false, notes, guard: 'violation', issues: [...issues, `Truyện bị chặn vì rò rỉ: ${detail}`] }
+  }
+
+  const slug = request.actorId === undefined ? request.pov : `${request.pov}-${request.actorId}`
+  const file = path.join(input.storiesDir, `${slug}.md`)
+  const words = wordCount(body)
+  fs.writeFileSync(file, renderStoryFile({
+    sceneId: input.exp.sceneId,
+    label: povLabel(request.pov, request.actorId, input.definitions),
+    brief,
+    title,
+    body,
+    notes,
+    words,
+    at: input.at,
+  }), 'utf8')
+
+  return { request, written: true, path: file, title, words, body, notes, guard: 'pass', issues }
+}
+
+/** Liệt kê scene, chịu lỗi đọc file. */
+function listScenesSafe(root: string): { id: string; mode: string; chaosTotal: number }[] {  try {
     return listScenes(root).map(scene => ({ id: scene.id, mode: scene.mode, chaosTotal: scene.chaosTotal }))
   } catch {
     return []

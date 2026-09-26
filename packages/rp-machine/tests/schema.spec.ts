@@ -55,7 +55,15 @@ function actorRuntime(payload: unknown = ACTOR_PAYLOAD) {
       inheritsParentContext: false,
       capabilities: { agentOptions: true, outputSchema: true, depthLimit: true, toolFilter: true, persona: true },
     }),
-    start: async () => ({ result: Promise.resolve({ stopReason: 'completed', structured: payload }), dispose: async () => {} }),
+    start: async (_name: string, request: { readonly label?: string }) => ({
+      result: Promise.resolve({
+        stopReason: 'completed',
+        structured: String(request.label ?? '').startsWith('writer:')
+          ? { title: 'Truyện thử', body: 'Một đoạn văn đủ dài để vượt ngưỡng kiểm tra của writer. '.repeat(8), notes: ['ánh nến'] }
+          : payload,
+      }),
+      dispose: async () => {},
+    }),
   }
 }
 
@@ -129,6 +137,11 @@ async function capture(): Promise<{ tools: RpToolDefinition[]; captured: Map<str
   record('rp_actor_cast', await call('rp_actor_cast', { sceneId, cast: ACTOR_CAST, locations: ACTOR_LOCATIONS, playerLocation: 'kitchen' }))
   record('rp_actor_turn', await call('rp_actor_turn', { sceneId, playerAction: 'Tôi chào quản gia.' }))
   record('rp_actor_state', await call('rp_actor_state', { sceneId }))
+
+  // Story: log lời kể, export hồ sơ, viết truyện ngắn.
+  record('rp_log', await call('rp_log', { sceneId, narration: 'Quản gia cúi đầu.', outcome: 'Quản gia đã đáp lời.' }))
+  record('rp_export', await call('rp_export', { sceneId, pov: 'player' }))
+  record('rp_write', await call('rp_write', { sceneId, view: 'player', length: 'short', style: 'plain' }))
 
   // Nhánh chưa có ván. `rp_actor_state` cũng gọi resolveRun nên cũng ném — cùng quy ước với mọi tool
   // khác, và đã có test riêng cho nhánh chưa khai dàn actor.

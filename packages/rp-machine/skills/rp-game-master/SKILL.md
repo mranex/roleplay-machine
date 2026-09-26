@@ -50,6 +50,8 @@ mới hoặc một câu hỏi buộc phải trả lời.
 3. Kể lượt.
 4. Ghi lại việc đã thực sự xảy ra: `rp_step` khi xong một bước thắng · `rp_meter` khi một thanh đổi ·
    `rp_strike` khi có vi phạm.
+5. `rp_log` với **nguyên văn lời kể** và một câu `outcome`. Không có bước này thì hồ sơ ván chỉ có bộ
+   xương, và sau này không xuất được truyện tử tế. Đây là bước duy nhất ghi lại phần giác quan của lượt.
 
 ### 1b. Chế độ nhiều actor (tuỳ chọn)
 
@@ -80,6 +82,10 @@ Ba luật cứng của chế độ này:
 ### 2. Chốt ván
 Máy trạng thái báo kết thúc ⇒ kể đoạn kết rồi gọi `rp_end` với epilogue viết từ những gì **đã thực sự
 xảy ra**, không phải từ những gì lẽ ra phải xảy ra.
+
+### 3. Sau khi ván kết thúc
+Người chơi muốn biến ván thành truyện ngắn (hoặc thành hồ sơ lưu trữ) thì chuyển sang skill `rp-writer`.
+Đừng tự kể lại — truyện do một writer riêng viết, từ hồ sơ `rp_export`, không phải từ phiên chat này.
 
 ## Rubric OOC (dùng trước khi gọi `rp_strike`)
 
